@@ -18,6 +18,8 @@ h1 {
   margin: auto;
   padding: 1rem;
   font-family: var(--title-font);
+  display: flex;
+  justify-content: center;
 }
 
 p {
@@ -30,4 +32,16 @@ p {
 
 a {
   font-family: var(--title-font);
+}
+
+/* _____ PAGE TUTORIELS _____ */
+
+.prendreDeposer{
+  display: flex;
+  justify-content: center;
+}
+
+.tuto{
+  display: flex;
+  justify-content: center;
 }
