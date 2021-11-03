@@ -1,11 +1,16 @@
 {
   "extends": [
-    "stylelint-config-standard",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components",
     "./node_modules/prettier-stylelint/config.js"
   ],
+  "processors": ["stylelint-processor-styled-components"],
   "rules": {
     "indentation": 2,
     "string-quotes": "single",
-    "font-family-name-quotes":null
+    "font-family-name-quotes": null
+  },
+  "scripts": {
+    "lint:css": "stylelint './src/**/*.js'"
   }
 }
