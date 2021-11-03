@@ -3,8 +3,8 @@
 /* _____ Formattage de base _____ */
 
 :root {
-  --green-color: #6DB290;
-  --title-font : 'Archivo', sans-serif;
+  --green-color: #6db290;
+  --title-font: 'Archivo', sans-serif;
   --title-size: ;
   --text-font: 'Noto Sans Mono', monospace;
   --text-size: ;
@@ -53,7 +53,6 @@ a:link {
   text-decoration: none;
 }
 
-
 /* _____ P A G E   A C C U E I L _____ */
 
 .searchbar {
@@ -78,7 +77,7 @@ a:link {
   border: none;
 }
 
-.searchbar .searchIcon {
+.searchbar .search-icon {
   border-radius: 100%;
   width: 1.8rem;
   height: 1.8rem;
