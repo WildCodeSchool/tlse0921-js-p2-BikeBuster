@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Lobster&family=Noto+Sans+Mono:wght@300&display=swap');
+
 /* _____ Formattage de base _____ */
+
 :root {
   --green-color: #6db290;
   --title-font: 'Archivo', sans-serif;
@@ -11,9 +14,26 @@
 
 body {
   margin: 0;
+  font-size: 15px;
 }
 
 h1 {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+}
+
+h3 {
   width: 80%;
   margin: auto;
   padding: 1rem;
@@ -25,11 +45,306 @@ p {
   margin: auto;
   text-align: justify;
   font-family: var(--text-font);
-  font-size: 0.6rem;
 }
 
 a {
   font-family: var(--title-font);
+  text-decoration: none;
+}
+
+.container-menu{
+  background-color: var(--green-color);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo p {
+  font-family: var(--logo-font);
+  font-size: 0,7rem;
+  width: auto;
+    
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  font-family: var(--title-font);
+}
+
+.white-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.icon-menu {
+  height: 30px;
+  width: 30px;
+  color: black;
+}
+
+.white-button-pc {
+  display: none;
+}
+
+.english-flag {
+  display: none;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .flexbox-menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--green-color);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+  }
+
+  .video {
+    height: 120px;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo p {
+    font-family: 'Lobster', cursive;
+    font-size: var(--logo-size);
+  }
+
+  .menu {
+    font-family: var(--title-font);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+
+  .white-button {
+    display: none;
+  }
+
+  .white-button-pc {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: var(--text-font);
+    font-size: 15px;
+  
+  
+  }
+
+  .english-flag {
+    display: block;
+    height: 50%;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 375px){
+  /* Tarifs debut */
+
+  .table-style{
+    border-collapse: collapse;
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 5px 50px rgba (0,0,0,15%);
+    border: 1px solid #ddd;
+  }
+
+  .table-style thead tr th{
+    background-color: skyblue;
+    border: 1px solid #ddd;
+  }
+
+  .table-style td{
+    text-align: center;
+  }
+
+  .table-style th td{
+    padding: 15px 20px;
+  }
+
+  .table-style tbody tr td {
+    border: 1px solid #ddd;
+  }
+
+  .body tr:nth-child(even){
+    background-color: #f3f3f3;
+  }
+
+  .tarif{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .abonnement-cards{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ticket-title h1{
+    align-items: center;
+  }
+
+  .table{
+    display: flex;
+    justify-content: center;
+  }
+
+  .ticket-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    background-color: whitesmoke;
+    justify-content: center;
+  }
+
+  .card-text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overflow1 img{
+    width: 100%;
+    height: 50%;
+  }
+
+  .overflow1 p{
+    font-size: 15px;
+  }
+
+  .overflow2 p{
+    font-size: 15px;
+  }
+
+  .card-title1{
+    text-align: center;
+  }
+
+  .card-title2{
+    text-align: center;
+  }
+
+  .overflow1{
+    width: 95%;
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+  }
+
+  .overflow2 img{
+    width: 100%;
+    height: 50%;
+  }
+
+  .overflow2{
+    width: 95%;
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+  }
+
+  .cards h2{
+    text-align: center;
+  }
+
+}
+
+/* Tarifs fin */
+
+/* _____ PAGE TUTORIELS _____ */
+
+.prendreDeposer{
+  display: flex;
+  justify-content: center;
+}
+.explications{
+  font-size: 15px;
+}
+.tuto{
+  margin: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+  
+a:link {
+  text-decoration: none;
+}
+
+/* _____ P A G E   A C C U E I L _____ */
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar #searchbar {
+  width: 65%;
+  height: 1.8rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #6db28f81;
+  font-family: var(--text-font);
+  font-size: 0.8rem;
+}
+
+#searchbar:focus-visible {
+  outline: none;
+  border: none;
+}
+
+.searchbar .search-icon {
+  border-radius: 100%;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--green-color);
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* _____ Affichage carte leaflet _____ */
