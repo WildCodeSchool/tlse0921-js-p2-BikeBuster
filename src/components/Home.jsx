@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Map from './Map';
+
 import SearchIcon from '@mui/icons-material/Search';
 import Geoloc from './Geoloc';
 import TakeDrop from './TakeDrop';
@@ -26,6 +29,9 @@ function Home() {
       <div>
         <Geoloc />
       </div>
+      <div>
+    <Map />
+  </div>
     </div>
   );
 }

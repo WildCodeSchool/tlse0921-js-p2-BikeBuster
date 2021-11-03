@@ -4,7 +4,6 @@
 
 :root {
   --green-color: #6db290;
-  --title-font : 'Archivo', sans-serif;
   --title-font: 'Archivo', sans-serif;
   --title-size: ;
   --text-font: 'Noto Sans Mono', monospace;
@@ -346,4 +345,10 @@ a:link {
   justify-content: center;
   align-items: center;
 
+}
+
+/* _____ Affichage carte leaflet _____ */
+.leaflet-container {
+  width: 100vw;
+  height: 100vh;
 }
