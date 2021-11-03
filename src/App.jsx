@@ -1,9 +1,9 @@
-import RemoveMe from './components/RemoveMe';
+import Map from './components/Map';
 
 function App() {
   return (
     <div>
-      <RemoveMe />
+      <Map />
     </div>
   );
 }
