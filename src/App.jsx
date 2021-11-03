@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Tutoriels from './components/Tutoriels';
 import Tarifs from './components/Tarifs';
 import Apropos from './components/Apropos';
-import UserMarker from './components/UserMarker';
 
 function App() {
   return (
@@ -15,11 +14,7 @@ function App() {
       <Route path="/Tutoriels" exact component={Tutoriels} />
       <Route path="/Tarifs" exact component={Tarifs} />
       <Route path="/Apropos" exact component={Apropos} />
-      <div>
-        <UserMarker />
-      </div>
     </div>
-
   );
 }
 

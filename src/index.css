@@ -40,8 +40,12 @@ a {
   display: flex;
   justify-content: center;
 }
-
+.explications{
+  font-size: 15px;
+}
 .tuto{
+  margin: 5%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
 }
