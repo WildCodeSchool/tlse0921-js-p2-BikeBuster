@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Lobster&family=Noto+Sans+Mono:wght@300&display=swap');
+
 /* _____ Formattage de base _____ */
+
 :root {
   --green-color: #6db290;
   --title-font : 'Archivo', sans-serif;
+  --title-font: 'Archivo', sans-serif;
   --title-size: ;
   --text-font: 'Noto Sans Mono', monospace;
   --text-size: ;
@@ -10,10 +14,25 @@
 }
 
 body {
-  margin: 0
+  margin: 0;
+  font-size: 15px;
 }
 
 h1 {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+}
+
+h2 {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+}
+
+h3 {
   width: 80%;
   margin: auto;
   padding: 1rem;
@@ -25,12 +44,12 @@ p {
   margin: auto;
   text-align: justify;
   font-family: var(--text-font);
-  font-size: 0.6rem;
 }
 
 a {
   font-family: var(--title-font);
 }
+
 
 @media screen and (max-width: 375px){
   /* Tarifs debut */
@@ -143,3 +162,42 @@ a {
 }
 
 /* Tarifs fin */
+
+a:link {
+  text-decoration: none;
+}
+
+/* _____ P A G E   A C C U E I L _____ */
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar #searchbar {
+  width: 65%;
+  height: 1.8rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #6db28f81;
+  font-family: var(--text-font);
+  font-size: 0.8rem;
+}
+
+#searchbar:focus-visible {
+  outline: none;
+  border: none;
+}
+
+.searchbar .search-icon {
+  border-radius: 100%;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--green-color);
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
