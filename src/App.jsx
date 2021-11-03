@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
@@ -14,7 +13,6 @@ function App() {
       <Route path="/Tutoriels" exact component={Tutoriels} />
       <Route path="/Tarifs" exact component={Tarifs} />
       <Route path="/Apropos" exact component={Apropos} />
-
     </div>
   );
 }

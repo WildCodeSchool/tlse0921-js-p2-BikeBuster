@@ -1,6 +1,6 @@
 /* _____ Formattage de base _____ */
 :root {
-  --green-color: #6DB290;
+  --green-color: #6db290;
   --title-font : 'Archivo', sans-serif;
   --title-size: ;
   --text-font: 'Noto Sans Mono', monospace;
@@ -30,4 +30,130 @@ p {
 
 a {
   font-family: var(--title-font);
+  text-decoration: none;
+}
+
+.container-menu{
+  background-color: var(--green-color);
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo p {
+  font-family: var(--logo-font);
+  font-size: 0,7rem;
+  width: auto;
+    
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  font-family: var(--title-font);
+}
+
+.white-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.icon-menu {
+  height: 30px;
+  width: 30px;
+  color: black;
+}
+
+.white-button-pc {
+  display: none;
+}
+
+.english-flag {
+  display: none;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .flexbox-menu {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--green-color);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+  }
+
+  .video {
+    height: 120px;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo p {
+    font-family: 'Lobster', cursive;
+    font-size: var(--logo-size);
+  }
+
+  .menu {
+    font-family: var(--title-font);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+
+  .white-button {
+    display: none;
+  }
+
+  .white-button-pc {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: var(--text-font);
+    font-size: 15px;
+  
+  
+  }
+
+  .english-flag {
+    display: block;
+    height: 50%;
+  }
+
+
 }
