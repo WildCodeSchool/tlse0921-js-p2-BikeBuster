@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import { geolocated, geoPropTypes } from 'react-geolocated';
 
 // function Geoloc({ isGeolocationEnabled, coords }) {
@@ -37,13 +37,13 @@ const Geoloc = () => {
     timeout: 27000,
   };
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      success();
-      const watchID = navigator.geolocation.watchPosition(success, error, options);
-      navigator.geolocation.clearWatch(watchID);
-    }
-  }, []);
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(success, error, options);
+  }
+
+  // function stopWatch() {
+  //   navigator.geolocation.clearWatch(watchID);
+  // }
 
   return (
     <div>
