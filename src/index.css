@@ -1,6 +1,6 @@
 /* _____ Formattage de base _____ */
 :root {
-  --green-color: #6DB290;
+  --green-color: #6db290;
   --title-font : 'Archivo', sans-serif;
   --title-size: ;
   --text-font: 'Noto Sans Mono', monospace;
@@ -31,3 +31,115 @@ p {
 a {
   font-family: var(--title-font);
 }
+
+@media screen and (max-width: 375px){
+  /* Tarifs debut */
+
+  .table-style{
+    border-collapse: collapse;
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 5px 50px rgba (0,0,0,15%);
+    border: 1px solid #ddd;
+  }
+
+  .table-style thead tr th{
+    background-color: skyblue;
+    border: 1px solid #ddd;
+  }
+
+  .table-style td{
+    text-align: center;
+  }
+
+  .table-style th td{
+    padding: 15px 20px;
+  }
+
+  .table-style tbody tr td {
+    border: 1px solid #ddd;
+  }
+
+  .body tr:nth-child(even){
+    background-color: #f3f3f3;
+  }
+
+  .tarif{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .abonnement-cards{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ticket-title h1{
+    align-items: center;
+  }
+
+  .table{
+    display: flex;
+    justify-content: center;
+  }
+
+  .ticket-title{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    background-color: whitesmoke;
+    justify-content: center;
+  }
+
+  .card-text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overflow1 img{
+    width: 100%;
+    height: 50%;
+  }
+
+  .overflow1 p{
+    font-size: 15px;
+  }
+
+  .overflow2 p{
+    font-size: 15px;
+  }
+
+  .card-title1{
+    text-align: center;
+  }
+
+  .card-title2{
+    text-align: center;
+  }
+
+  .overflow1{
+    width: 95%;
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+  }
+
+  .overflow2 img{
+    width: 100%;
+    height: 50%;
+  }
+
+  .overflow2{
+    width: 95%;
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+  }
+
+  .cards h2{
+    text-align: center;
+  }
+
+}
+
+/* Tarifs fin */
