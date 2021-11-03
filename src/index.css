@@ -1,3 +1,38 @@
+/* _____ Formattage de base _____ */
+:root {
+  --green-color: #6db290;
+  --title-font: 'Archivo', sans-serif;
+  --title-size: ;
+  --text-font: 'Noto Sans Mono', monospace;
+  --text-size: ;
+  --logo-font: 'Lobster', cursive;
+  --logo-size: 1.8rem;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+}
+
+p {
+  width: 80%;
+  margin: auto;
+  text-align: justify;
+  font-family: var(--text-font);
+  font-size: 0.6rem;
+}
+
+a {
+  font-family: var(--title-font);
+}
+
+/* _____ Affichage carte leaflet _____ */
 .leaflet-container {
   width: 100vw;
   height: 100vh;
