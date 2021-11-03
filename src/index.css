@@ -23,6 +23,8 @@ h1 {
   margin: auto;
   padding: 1rem;
   font-family: var(--title-font);
+  display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -49,6 +51,7 @@ p {
 a {
   font-family: var(--title-font);
 }
+
 
 
 @media screen and (max-width: 375px){
@@ -163,6 +166,22 @@ a {
 
 /* Tarifs fin */
 
+/* _____ PAGE TUTORIELS _____ */
+
+.prendreDeposer{
+  display: flex;
+  justify-content: center;
+}
+.explications{
+  font-size: 15px;
+}
+.tuto{
+  margin: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+  
 a:link {
   text-decoration: none;
 }
@@ -200,4 +219,5 @@ a:link {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
