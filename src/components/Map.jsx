@@ -12,6 +12,7 @@ function Map() {
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          tlse0921-js-p2-BikeBuster
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={[43.604652, 1.444209]}>
