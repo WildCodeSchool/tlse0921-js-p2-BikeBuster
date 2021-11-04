@@ -14,12 +14,7 @@ function App() {
       <Route path="/Tutoriels" exact component={Tutoriels} />
       <Route path="/Tarifs" exact component={Tarifs} />
       <Route path="/Apropos" exact component={Apropos} />
-
-
       <Data />
-
-
-
     </div>
   );
 }
