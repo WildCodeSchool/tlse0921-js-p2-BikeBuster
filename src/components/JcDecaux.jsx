@@ -12,7 +12,7 @@ const Data = () => {
   return (
     <ul>
       {results
-        .filter((e) => (e.number === 55))
+        .filter((e) => e.number === 55)
         .map((result) => (
           <li>
             {result.name}
@@ -33,4 +33,5 @@ const Data = () => {
     </ul>
   );
 };
+
 export default Data;
