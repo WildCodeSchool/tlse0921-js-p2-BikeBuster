@@ -33,4 +33,5 @@ const Data = () => {
     </ul>
   );
 };
+
 export default Data;
