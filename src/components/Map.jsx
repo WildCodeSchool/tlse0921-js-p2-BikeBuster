@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import {
+  MapContainer, TileLayer, Marker, Popup,
+} from 'react-leaflet';
 import Zoom from '@mui/material/Zoom';
+import Geoloc from './Geoloc';
 
 function Map() {
+  const location = Geoloc();
+  
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -11,6 +16,7 @@ function Map() {
       .then((response) => response.json())
       .then((data) => setResults(data));
   }, []);
+
   return (
     <div>
       <MapContainer
@@ -22,6 +28,18 @@ function Map() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+
+        {location.loaded && !location.error && (
+          <Marker
+            position={[location.coordinates.lat, location.coordinates.lng]}
+          >
+            <Popup>
+              Nombre de vélos disponibles: <br />
+              Nombre de places disponibles:
+            </Popup>
+          </Marker>
+        )}
+
         {results.map((e) => (
           <Marker key={e.name} position={[e.position.lat, e.position.lng]} />
         ))}

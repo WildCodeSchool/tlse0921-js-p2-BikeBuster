@@ -1,55 +1,43 @@
-import React, { useState } from 'react';
-// import { geolocated, geoPropTypes } from 'react-geolocated';
-
-// function Geoloc({ isGeolocationEnabled, coords }) {
-//   console.log(isGeolocationEnabled, coords.latitude);
-//   return <div>toto</div>;
-// }
-
-// function Geoloc() {
-//   return <div>Coucou</div>;
-// }
-
-// export default geolocated({
-//   positionOptions: {
-//     enableHighAccuracy: false,
-//   },
-
-//   userDecisionTimeout: 5000,
-// })(Geoloc);
+import { useState, useEffect } from 'react';
 
 const Geoloc = () => {
-  const [latitude, setLatitude] = useState('latitude');
-  const [longitude, setLongitude] = useState('longitude');
+  const [coordinates, setCoordinates] = useState({
+    loaded: false,
+    coordinates: { lat: '', lng: '' },
+  });
 
-  function success(position) {
-    setLatitude(position.coords.latitude);
-    setLongitude(position.coords.longitude);
-  }
-
-  function error() {
-    alert('Sorry, no position available. Check if geolocation is enabled in your browser.');
-  }
-
-  const options = {
-    enableHighAccuracy: true,
-    maximumAge: 30000,
-    timeout: 27000,
+  const onSuccess = (location) => {
+    setCoordinates({
+      loaded: true,
+      coordinates: {
+        lat: location.coords.latitude,
+        lng: location.coords.longitude,
+      },
+    });
   };
 
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(success, error, options);
-  }
+  const onError = (error) => {
+    setCoordinates({
+      loaded: true,
+      error: {
+        code: error.code,
+        message: error.message,
+      },
+    });
+  };
 
-  // function stopWatch() {
-  //   navigator.geolocation.clearWatch(watchID);
-  // }
+  useEffect(() => {
+    if (!('geolocation' in navigator)) {
+      onError({
+        code: 0,
+        message: 'Geolocation not supported',
+      });
+    }
 
-  return (
-    <div>
-      {latitude}, {longitude}
-    </div>
-  );
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  }, []);
+
+  return coordinates;
 };
 
 export default Geoloc;
