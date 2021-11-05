@@ -7,7 +7,7 @@ import Geoloc from './Geoloc';
 
 function Map() {
   const location = Geoloc();
-  
+
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -41,7 +41,14 @@ function Map() {
         )}
 
         {results.map((e) => (
-          <Marker key={e.name} position={[e.position.lat, e.position.lng]} />
+          <Marker key={e.name} position={[e.position.lat, e.position.lng]}>
+            <Popup>
+              {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
+              <br />
+              {`Vélos disponibles: ${e.available_bikes}`} <br />
+              {`Places disponibles: ${e.available_bike_stands}`}
+            </Popup>
+          </Marker>
         ))}
       </MapContainer>
     </div>
