@@ -33,10 +33,7 @@ function Map() {
           <Marker
             position={[location.coordinates.lat, location.coordinates.lng]}
           >
-            <Popup>
-              Nombre de vélos disponibles: <br />
-              Nombre de places disponibles:
-            </Popup>
+            <Popup>Vous êtes ici</Popup>
           </Marker>
         )}
 
