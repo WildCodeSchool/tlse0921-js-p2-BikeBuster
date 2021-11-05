@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
+
 import {
   MapContainer, TileLayer, Marker, Popup,
 } from 'react-leaflet';
+import L from 'leaflet';
+
 import Zoom from '@mui/material/Zoom';
+
 import Geoloc from './Geoloc';
 
 function Map() {
@@ -16,6 +20,16 @@ function Map() {
       .then((response) => response.json())
       .then((data) => setResults(data));
   }, []);
+
+  const userMarker = new L.Icon({
+    iconUrl: 'placeholder(1).png',
+    iconSize: [50, 50],
+  });
+
+  const bikesMarker = new L.Icon({
+    iconUrl: 'location-pin.png',
+    iconSize: [40, 40],
+  });
 
   return (
     <div>
@@ -32,16 +46,20 @@ function Map() {
         {location.loaded && !location.error && (
           <Marker
             position={[location.coordinates.lat, location.coordinates.lng]}
+            icon={userMarker}
           >
             <Popup>
-              Nombre de vélos disponibles: <br />
-              Nombre de places disponibles:
+              Vous êtes ici
             </Popup>
           </Marker>
         )}
 
         {results.map((e) => (
-          <Marker key={e.name} position={[e.position.lat, e.position.lng]}>
+          <Marker
+            key={e.name}
+            position={[e.position.lat, e.position.lng]}
+            icon={bikesMarker}
+          >
             <Popup>
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
