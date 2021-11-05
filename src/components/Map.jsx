@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import {
+  MapContainer, TileLayer, Marker, Popup,
+} from 'react-leaflet';
 import Zoom from '@mui/material/Zoom';
 
 function Map() {
@@ -23,7 +25,14 @@ function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {results.map((e) => (
-          <Marker key={e.name} position={[e.position.lat, e.position.lng]} />
+          <Marker key={e.name} position={[e.position.lat, e.position.lng]}>
+            <Popup>
+              {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
+              <br />
+              {`Vélos disponibles: ${e.available_bikes}`} <br />
+              {`Places disponibles: ${e.available_bike_stands}`}
+            </Popup>
+          </Marker>
         ))}
       </MapContainer>
     </div>
