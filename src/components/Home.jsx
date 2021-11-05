@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import Map from './Map';
-// import Geoloc from './Geoloc';
 // import TakeDrop from './TakeDrop';
 // import BikeNumber from './BikeNumber';
 

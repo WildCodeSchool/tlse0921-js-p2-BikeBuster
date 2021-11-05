@@ -4,7 +4,6 @@ import Home from './components/Home';
 import Tutoriels from './components/Tutoriels';
 import Tarifs from './components/Tarifs';
 import Apropos from './components/Apropos';
-// import Data from './components/JcDecaux';
 
 function App() {
   return (
