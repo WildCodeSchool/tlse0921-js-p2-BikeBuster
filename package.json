@@ -40,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "eslint --ext .js,.jsx --fix src/ && npx stylelint '**/*.css' --fix",
+    "lint": "eslint --ext .js,.jsx --fix src/",
     "prettify": "pretty-quick --staged"
   },
   "eslintConfig": {
