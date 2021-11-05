@@ -24,9 +24,8 @@ function Map() {
         scrollWheelZoom={Zoom}
       >
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           tlse0921-js-p2-BikeBuster
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url="https://api.mapbox.com/styles/v1/leoplanelles/ckvm9t3k7k7on15mpslnijx7n/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGVvcGxhbmVsbGVzIiwiYSI6ImNrdm05cnNlYjB4N3Aycm91NW9hNmJvenQifQ.QoNf0EMBb0BFbohQf-VZGA"
         />
 
         {location.loaded && !location.error && (
