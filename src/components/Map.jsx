@@ -25,9 +25,19 @@ function Map() {
     iconSize: [50, 50],
   });
 
-  const bikesMarker = new L.Icon({
-    iconUrl: 'location-pin.png',
-    iconSize: [40, 40],
+  const redMarker = new L.Icon({
+    iconUrl: 'redmarker.png',
+    iconSize: [50, 50],
+  });
+
+  const yellowMarker = new L.Icon({
+    iconUrl: 'yellowmarker.png',
+    iconSize: [50, 50],
+  });
+
+  const greenMarker = new L.Icon({
+    iconUrl: 'greenmarker.png',
+    iconSize: [50, 50],
   });
 
   return (
@@ -48,26 +58,62 @@ function Map() {
             position={[location.coordinates.lat, location.coordinates.lng]}
             icon={userMarker}
           >
-            <Popup>
-              Vous êtes ici
-            </Popup>
+            <Popup>Vous êtes ici</Popup>
           </Marker>
         )}
 
-        {results.map((e) => (
-          <Marker
-            key={e.name}
-            position={[e.position.lat, e.position.lng]}
-            icon={bikesMarker}
-          >
-            <Popup>
-              {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
-              <br />
-              {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
-            </Popup>
-          </Marker>
-        ))}
+        {results
+          .filter((station) => station.available_bikes <= 5)
+          .map((e) => (
+            <Marker
+              key={e.name}
+              position={[e.position.lat, e.position.lng]}
+              icon={redMarker}
+            >
+              <Popup>
+                {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
+                <br />
+                {`Vélos disponibles: ${e.available_bikes}`} <br />
+                {`Places disponibles: ${e.available_bike_stands}`}
+              </Popup>
+            </Marker>
+          ))}
+
+        {results
+          .filter(
+            (station) => station.available_bikes > 5 && station.available_bikes <= 10,
+          )
+          .map((e) => (
+            <Marker
+              key={e.name}
+              position={[e.position.lat, e.position.lng]}
+              icon={yellowMarker}
+            >
+              <Popup>
+                {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
+                <br />
+                {`Vélos disponibles: ${e.available_bikes}`} <br />
+                {`Places disponibles: ${e.available_bike_stands}`}
+              </Popup>
+            </Marker>
+          ))}
+
+        {results
+          .filter((station) => station.available_bikes > 10)
+          .map((e) => (
+            <Marker
+              key={e.name}
+              position={[e.position.lat, e.position.lng]}
+              icon={greenMarker}
+            >
+              <Popup>
+                {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
+                <br />
+                {`Vélos disponibles: ${e.available_bikes}`} <br />
+                {`Places disponibles: ${e.available_bike_stands}`}
+              </Popup>
+            </Marker>
+          ))}
       </MapContainer>
     </div>
   );
