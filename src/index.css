@@ -51,12 +51,16 @@ a {
   font-family: var(--title-font);
   text-decoration: none;
 }
-/* MENU HEADER */
+
+
+/* MENU HEADER MOBILE*/
 .container-menu{
-  background-color: var(--green-color);
+  background-color: #72BB90;
   display: flex;
   justify-content: space-between;
   height: 90px;
+  z-index: 3;
+  position: relative;
 
 }
 
@@ -97,6 +101,7 @@ a {
   align-items: center;
   height: 50px;
   width: 50px;
+  margin-right: 20px;
   border-radius: 50%;
   border: 1px solid white;
   background-color: white;
@@ -116,66 +121,131 @@ a {
   display: none;
 }
 
+/* SEARCH BAR MOBILE */
 
-@media screen and (min-width: 1200px) {
-  
-
-  .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 30%;
-  }
-
-  .video {
-    height: 120px;
-    width: 120px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .logo div {
-    font-family: 'Lobster', cursive;
-    font-size: var(--logo-size);
-    margin-left: 30px;
-    color: white;
-  }
-
-  .menu {
-    font-family: var(--title-font);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 1rem;
-    width: 40%;
-    font-size: 0.8rem;
-  }
-
-  .white-button {
-    display: none;
-  }
-
-  .white-button-pc {
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-    font-family: var(--text-font);
-    font-size: 15px;
-  
-  
-  }
-
-  .english-flag {
-    display: block;
-    height: 50%;
-  }
-
+.search-container {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 80%;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translateY(-110%);
+  transition: transform .5s linear;
 
 }
 
 
 
-@media screen and (max-width: 375px){
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 70%;
+  
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+}
+
+.counter h1 {
+  padding: 0px;
+  font-size: 20px;
+}
+
+.counter button {
+  width: 25px;
+  height: 25px;
+  min-width: 0px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px;
+  border-radius: 30px;
+  background-color: #6db28f;
+}
+
+.counter button:hover {
+  background-color: #1b834f;
+}
+
+.search-bar #searchbar2 {
+  display: none;
+}
+
+.search-bar #searchbar {
+  width: 300px;
+  height: 1.8rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: #6db28fd8;
+  font-family: var(--text-font);
+  font-size: 0.8rem;
+}
+
+#searchbar:focus-visible {
+  outline: none;
+  border: none;
+}
+
+
+
+.search-bar .search-icon {
+  width: 1,8rem;
+  height: 1,8rem;
+  margin-left: 0.5rem;
+  color: #6db28f;
+ 
+
+}
+.scrolling-search {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  transition: .5s linear;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color: #6db28f;
+  width: 60%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+
+}
+
+
+#button-search-container {
+  display: none;
+}
+
+#button-search-container:checked ~ .search-container {
+ transform: translateY(0%);
+}
+
+
+#button-search-container:checked ~ .scrolling-search {
+  margin-top: 100px;
+  width: 20%;
+  background-color: #6db28f;
+  color: white;
+}
+
   /* Tarifs debut */
 
   .table-style{
@@ -283,7 +353,7 @@ a {
     text-align: center;
   }
 
-}
+
 
 /* Tarifs fin */
 
@@ -307,26 +377,77 @@ a:link {
   text-decoration: none;
 }
 
-/* _____ P A G E   A C C U E I L _____ */
 
 
-.searchContainer {
-  position: absolute;
-  width: 100%;
-  margin-top: 30px;
+
+@media screen and (min-width: 1200px) {
+  
+/* HEADER PC*/
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30%;
+  }
+
+  .video {
+    height: 120px;
+    width: 120px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo div {
+    font-family: 'Lobster', cursive;
+    font-size: var(--logo-size);
+    margin-left: 30px;
+    color: white;
+  }
+
+  .menu {
+    justify-content: space-between;
+    padding-right: 1rem;
+    width: 40%;
+    font-size: 0.8rem;
+  }
+
+  .white-button {
+    display: none;
+  }
+
+  .white-button-pc {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-family: var(--text-font);
+    font-size: 15px;
+  
+  
+  }
+
+  .english-flag {
+    display: block;
+    height: 50%;
+  }
+
+
+
+
+/* SEARCH BAR PC*/
+
+.search-container {
+  height: 50px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  z-index: 2;
-  display: none;
+  transform: translateY(0%);
 }
 
-.searchbar {
-  display: flex;
-  justify-content: space-evenly;
-  width: 50%;
-}
 
-.searchbar #searchbar {
+.search-bar #searchbar2 {
+  display: block;
   width: 300px;
   height: 1.8rem;
   padding-right: 1rem;
@@ -338,22 +459,14 @@ a:link {
   font-size: 0.8rem;
 }
 
-#searchbar:focus-visible {
-  outline: none;
-  border: none;
-}
 
-.searchbar .search-icon {
-  border-radius: 100%;
-  width: 1.8rem;
-  height: 1.8rem;
-  background-color: var(--green-color);
-  margin-left: 0.5rem;
- 
 
+.scrolling-search {
+  display: none;
 }
 
 
+}
 /* _____ Affichage carte leaflet _____ */
 .leaflet-container {
   width: 100vw;
