@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/cli": "^3.2.5",
+    "@capacitor/core": "^3.2.5",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "@material-ui/icons": "^4.11.2",
+    "@mui/icons-material": "^5.0.5",
     "@mui/material": "^5.0.6",
     "@mui/styled-engine-sc": "^5.0.4",
     "@react-leaflet/core": "^1.0.2",
@@ -12,11 +16,18 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "@types/react": "^17.0.33",
+    "axios": "^0.24.0",
     "leaflet": "^1.7.1",
+    "leaflet-routing-machine": "^3.2.12",
+    "material-ui-icons": "^1.0.0-beta.36",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-geolocated": "^3.2.0",
+    "react-icons": "^4.3.1",
     "react-leaflet": "^3.1.0",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-zoom": "^0.3.1",
     "styled-components": "^5.3.3",
     "stylelint-config-recommended": "^6.0.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -29,7 +40,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "eslint --ext .js,.jsx --fix src/ && npx stylelint '**/*.css' --fix",
+    "lint": "eslint --ext .js,.jsx --fix src/",
     "prettify": "pretty-quick --staged"
   },
   "eslintConfig": {
@@ -60,11 +71,15 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.14",
     "prettier": "^2.2.1",
     "prettier-stylelint": "^0.4.2",
     "pretty-quick": "^3.1.0",
-    "stylelint": "^14.0.0",
-    "stylelint-config-standard": "^23.0.0"
+    "stylelint": "^14.0.1",
+    "stylelint-config-recommended": "^6.0.0",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
