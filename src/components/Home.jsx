@@ -31,7 +31,7 @@ function Home() {
             id="searchbar2"
             name="searchbar"
             autoComplete="address-level4"
-            placeholder="Arrivé"
+            placeholder="Arrivée"
           />
           <div className="search-icon">
             <SearchIcon sx={{ fontSize: 25 }} />
