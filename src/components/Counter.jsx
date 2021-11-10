@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-const Count = ({ initialValue = 1 }) => {
-  const [count, setCount] = useState(initialValue);
+const Count = () => {
+  const [count, setCount] = useState(1);
   return (
     <div className="counter">
       <Stack spacing={2} direction="row">
