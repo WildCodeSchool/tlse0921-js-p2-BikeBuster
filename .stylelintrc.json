@@ -9,8 +9,5 @@
     "indentation": 2,
     "string-quotes": "single",
     "font-family-name-quotes": null
-  },
-  "scripts": {
-    "lint:css": "stylelint './src/**/*.js'"
   }
 }

@@ -20,6 +20,7 @@
     "leaflet": "^1.7.1",
     "leaflet-routing-machine": "^3.2.12",
     "material-ui-icons": "^1.0.0-beta.36",
+    "ngx-google-places-autocomplete": "^2.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-geolocated": "^3.2.0",
@@ -41,7 +42,8 @@
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "lint": "eslint --ext .js,.jsx --fix src/",
-    "prettify": "pretty-quick --staged"
+    "prettify": "pretty-quick --staged",
+    "lint:css": "stylelint './src/**/*.js'"
   },
   "eslintConfig": {
     "extends": [
