@@ -157,9 +157,6 @@ a {
   width: 70%;
 }
 
-.results-list-bike {
-  display: none;
-}
 
 .switch-count-container div{
   font-family:var(--text-font);
@@ -201,11 +198,11 @@ a {
   
 }
 
-.search-bar #searchbar2 {
+#searchbar2 {
   display: none;
 }
 
-.search-bar #searchbar {
+#searchbar {
   width: 300px;
   height: 1.8rem;
   padding-right: 1rem;
@@ -215,12 +212,16 @@ a {
   background-color: #6db28fd8;
   font-family: var(--text-font);
   font-size: 0.8rem;
+  box-shadow: 1px 1px 1px black;
 }
 
 #searchbar:focus-visible {
   outline: none;
   border: none;
+  box-shadow: 0 0 2pt 2pt #003f1fd8;
+  outline-width: 0px;
 }
+
 
 .search-bar .search-icon {
   width: 1, 8rem;
@@ -466,7 +467,7 @@ margin-right: 20px;
 
 
 
-  .search-bar #searchbar2 {
+  #searchbar2 {
     display: block;
     width: 300px;
     height: 1.8rem;
@@ -477,12 +478,21 @@ margin-right: 20px;
     background-color: #6db28fd8;
     font-family: var(--text-font);
     font-size: 0.8rem;
+    box-shadow: 1px 1px 1px black;
   }
+
+  #searchbar2:focus-visible {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 2pt 2pt #003f1fd8;
+    outline-width: 0px;
+}
 
   .scrolling-search {
     display: none;
   }
 }
+
 /* _____ Affichage carte leaflet _____ */
 .leaflet-container {
   width: 100vw;
