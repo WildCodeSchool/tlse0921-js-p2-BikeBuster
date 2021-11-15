@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react';
 
 import {
-  MapContainer, TileLayer, Marker, Popup,
+  MapContainer, TileLayer,
 } from 'react-leaflet';
-import L from 'leaflet';
 
 import Zoom from '@mui/material/Zoom';
 
-import Geoloc from './Geoloc';
 import ResultListStand from './ResultListStand';
 import ResultListBike from './ResultListBike';
+import LocationMarker from './LocationMarker';
 
 function Map(props) {
-  const { check } = props;
-  const location = Geoloc();
+  // eslint-disable-next-line react/prop-types
+  const { count, check } = props;
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -23,10 +22,6 @@ function Map(props) {
       .then((data) => setResults(data));
   }, []);
 
-  const userMarker = new L.Icon({
-    iconUrl: 'placeholder(1).png',
-    iconSize: [50, 50],
-  });
   return (
     <div>
       <MapContainer
@@ -38,17 +33,9 @@ function Map(props) {
           tlse0921-js-p2-BikeBuster
           url="https://api.mapbox.com/styles/v1/leoplanelles/ckvm9t3k7k7on15mpslnijx7n/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGVvcGxhbmVsbGVzIiwiYSI6ImNrdm05cnNlYjB4N3Aycm91NW9hNmJvenQifQ.QoNf0EMBb0BFbohQf-VZGA"
         />
-
-        {location.loaded && !location.error && (
-          <Marker
-            position={[location.coordinates.lat, location.coordinates.lng]}
-            icon={userMarker}
-          >
-            <Popup>Vous êtes ici</Popup>
-          </Marker>
-        )}
-        {check && <ResultListBike result={results} />}
-        {!check && <ResultListStand result={results} />}
+        {!check && <ResultListBike results={results} count={count} />};
+        {check && <ResultListStand results={results} count={count} />};
+        <LocationMarker />
       </MapContainer>
     </div>
   );

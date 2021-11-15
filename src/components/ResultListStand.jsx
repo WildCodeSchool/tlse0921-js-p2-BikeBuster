@@ -4,7 +4,7 @@ import { Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 
 const ResultListStand = (props) => {
-  const { result } = props;
+  const { results, count } = props;
 
   const redMarker = new L.Icon({
     iconUrl: 'redmarker.png',
@@ -23,8 +23,10 @@ const ResultListStand = (props) => {
 
   return (
     <div>
-      {result
-        .filter((station) => station.available_bike_stands <= 5)
+      {results
+        .filter(
+          (station) => station.available_bike_stands <= 5 && station.available_bike_stands >= count,
+        )
         .map((e) => (
           <Marker
             key={e.name}
@@ -39,9 +41,12 @@ const ResultListStand = (props) => {
             </Popup>
           </Marker>
         ))}
-      {result
+
+      {results
         .filter(
-          (station) => station.available_bike_stands > 5 && station.available_bike_stands <= 10,
+          (station) => station.available_bike_stands > 5
+              && station.available_bike_stands <= 10
+              && station.available_bike_stands >= count,
         )
         .map((e) => (
           <Marker
@@ -58,8 +63,10 @@ const ResultListStand = (props) => {
           </Marker>
         ))}
 
-      {result
-        .filter((station) => station.available_bike_stands > 10)
+      {results
+        .filter(
+          (station) => station.available_bike_stands > 10 && station.available_bike_stands >= count,
+        )
         .map((e) => (
           <Marker
             key={e.name}

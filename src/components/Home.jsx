@@ -1,12 +1,40 @@
-import React from 'react';
+/* eslint-disable react/jsx-no-bind */
+import { React, useState, useCallback } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Switch from '@mui/material/Switch';
+import { alpha, styled } from '@mui/material/styles';
+import { green } from '@mui/material/colors';
 import Map from './Map';
 import Count from './Counter';
 
+const GreenSwitch = styled(Switch)(({ theme }) => ({
+  '& .MuiSwitch-switchBase.Mui-checked': {
+    color: green[600],
+    '&:hover': {
+      backgroundColor: alpha(green[600], theme.palette.action.hoverOpacity),
+    },
+  },
+  '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
+    backgroundColor: green[600],
+  },
+}));
+
+const label = { inputProps: { 'aria-label': 'Switch demo' } };
+
 function Home() {
-  const [check, setCheck] = React.useState(false);
+  const [count, setCount] = useState(1);
+  const handleMoreBikes = useCallback(() => {
+    if (count > 1) {
+      setCount((e) => e - 1);
+    }
+  }, [count]);
+  const handleLessBikes = useCallback(() => {
+    if (count < 20) {
+      setCount((e) => e + 1);
+    }
+  }, [count]);
+  const [check, setCheck] = useState(false);
 
   function filterBikeStand() {
     setCheck(!check);
@@ -14,9 +42,6 @@ function Home() {
   return (
     <div className="globalHome">
       <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
-      <label>
-        <input id="switch" type="checkbox" onClick={filterBikeStand} />
-      </label>
       <input id="button-search-container" type="checkbox" />
       <div className="scrolling-search">
         <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
@@ -27,9 +52,13 @@ function Home() {
       <div className="search-container">
         <div className="switch-count-container">
           <div>prendre</div>
-          <Switch />
-          <div>déposer</div>
-          <Count />
+          <GreenSwitch {...label} onClick={filterBikeStand} />
+          <div id="deposer">déposer</div>
+          <Count
+            count={count}
+            handleMoreBikes={handleMoreBikes}
+            handleLessBikes={handleLessBikes}
+          />
         </div>
         <div className="search-bar">
           <input
@@ -52,7 +81,7 @@ function Home() {
         </div>
       </div>
       <div className="map">
-        <Map check={check} />
+        <Map check={check} count={count} />
       </div>
     </div>
   );
