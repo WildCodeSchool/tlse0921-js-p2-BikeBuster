@@ -9,7 +9,9 @@ import Zoom from '@mui/material/Zoom';
 
 import Geoloc from './Geoloc';
 
-function Map() {
+function Map(props) {
+  // eslint-disable-next-line react/prop-types
+  const { count } = props;
   const location = Geoloc();
   const [results, setResults] = useState([]);
   useEffect(() => {
@@ -62,7 +64,9 @@ function Map() {
         )}
 
         {results
-          .filter((station) => station.available_bikes <= 5)
+          .filter(
+            (station) => station.available_bikes <= 5 && station.available_bikes >= count,
+          )
           .map((e) => (
             <Marker
               key={e.name}
@@ -80,7 +84,9 @@ function Map() {
 
         {results
           .filter(
-            (station) => station.available_bikes > 5 && station.available_bikes <= 10,
+            (station) => station.available_bikes > 5
+              && station.available_bikes <= 10
+              && station.available_bikes >= count,
           )
           .map((e) => (
             <Marker
@@ -98,7 +104,9 @@ function Map() {
           ))}
 
         {results
-          .filter((station) => station.available_bikes > 10)
+          .filter(
+            (station) => station.available_bikes > 10 && station.available_bikes >= count,
+          )
           .map((e) => (
             <Marker
               key={e.name}

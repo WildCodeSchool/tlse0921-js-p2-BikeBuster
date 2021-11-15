@@ -1,27 +1,19 @@
-import { useState } from 'react';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-const Count = ({ initialValue = 1 }) => {
-  const [count, setCount] = useState(initialValue);
+const Count = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { count, handleMoreBikes, handleLessBikes } = props;
   return (
     <div className="counter">
       <Stack spacing={2} direction="row">
-        <Button
-          type="button"
-          onClick={() => { if (count > 1) { setCount((prevCount) => prevCount - 1); } }}
-          variant="contained"
-        >
+        <Button type="button" onClick={handleMoreBikes} variant="contained">
           -
         </Button>
       </Stack>
       <h1>{count}</h1>
       <Stack spacing={2} direction="row">
-        <Button
-          type="button"
-          onClick={() => { if (count < 20) { setCount((prevCount) => prevCount + 1); } }}
-          variant="contained"
-        >
+        <Button type="button" onClick={handleLessBikes} variant="contained">
           +
         </Button>
       </Stack>
