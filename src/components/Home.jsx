@@ -1,19 +1,21 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-// import MenuIcon from '@mui/icons-material/Menu';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Switch from '@mui/material/Switch';
 import Map from './Map';
 import Count from './Counter';
-// import TakeDrop from './TakeDrop';
-// import BikeNumber from './BikeNumber';
 
 function Home() {
+  const [check, setCheck] = React.useState(false);
+
+  function filterBikeStand() {
+    setCheck(!check);
+  }
   return (
     <div className="globalHome">
       <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
       <label>
-        <input id="switch" type="checkbox" />
+        <input id="switch" type="checkbox" onClick={filterBikeStand} />
       </label>
       <input id="button-search-container" type="checkbox" />
       <div className="scrolling-search">
@@ -50,7 +52,7 @@ function Home() {
         </div>
       </div>
       <div className="map">
-        <Map />
+        <Map check={check} />
       </div>
     </div>
   );

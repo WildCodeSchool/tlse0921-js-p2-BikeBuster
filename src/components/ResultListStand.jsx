@@ -41,7 +41,7 @@ const ResultListStand = (props) => {
         ))}
       {result
         .filter(
-          (station) => station.available_bikes > 5 && station.available_bike_stands <= 10,
+          (station) => station.available_bike_stands > 5 && station.available_bike_stands <= 10,
         )
         .map((e) => (
           <Marker
