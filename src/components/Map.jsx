@@ -29,12 +29,11 @@ function Map() {
 
   let a = document.getElementById('switch');
   a = true;
-  a.checked = false;
   // eslint-disable-next-line no-unused-expressions
   a.checked ? (a = false) : (a = true);
   console.log(a.checked);
 
-  if (a.value === true) {
+  if (a.checked) {
     return (
       <div>
         <MapContainer
