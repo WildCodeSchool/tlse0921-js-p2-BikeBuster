@@ -52,22 +52,19 @@ a {
   text-decoration: none;
 }
 
-
 /* MENU HEADER MOBILE*/
-.container-menu{
-  background-color: #72BB90;
+.container-menu {
+  background-color: #72bb90;
   display: flex;
   justify-content: space-between;
   height: 90px;
   z-index: 3;
   position: relative;
-
 }
 
 .logo {
   width: 25%;
   height: 100%;
-
 }
 
 .video {
@@ -79,12 +76,11 @@ a {
 
 .logo div {
   font-family: var(--logo-font);
-  font-size: 0,7rem;
+  font-size: 0, 7rem;
   width: auto;
   height: 20%;
   padding-left: 15px;
   color: white;
-    
 }
 
 .menu {
@@ -124,11 +120,11 @@ a {
 /* SEARCH BAR MOBILE */
 
 .search-container {
-  position: absolute; 
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 80%;
   height: 100px;
   background-color: rgb(255, 255, 255);
@@ -140,18 +136,14 @@ a {
   align-items: center;
   justify-content: space-evenly;
   transform: translateY(-110%);
-  transition: transform .5s linear;
-
+  transition: transform 0.5s linear;
 }
-
-
 
 .search-bar {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   width: 70%;
-  
 }
 
 .counter {
@@ -200,24 +192,20 @@ a {
   border: none;
 }
 
-
-
 .search-bar .search-icon {
-  width: 1,8rem;
-  height: 1,8rem;
+  width: 1, 8rem;
+  height: 1, 8rem;
   margin-left: 0.5rem;
   color: #6db28f;
- 
-
 }
 .scrolling-search {
   position: absolute;
   z-index: 4;
   left: 0;
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
-  transition: .5s linear;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s linear;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -225,19 +213,15 @@ a {
   width: 60%;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-
-
 }
-
 
 #button-search-container {
   display: none;
 }
 
 #button-search-container:checked ~ .search-container {
- transform: translateY(0%);
+  transform: translateY(0%);
 }
-
 
 #button-search-container:checked ~ .scrolling-search {
   margin-top: 100px;
@@ -246,143 +230,137 @@ a {
   color: white;
 }
 
-  /* Tarifs debut */
+/* Tarifs debut */
 
-  .table-style{
-    border-collapse: collapse;
-    width: 100%;
-    height: 500px;
-    box-shadow: 0 5px 50px rgba (0,0,0,15%);
-    border: 1px solid #ddd;
-  }
+.table-style {
+  border-collapse: collapse;
+  width: 100%;
+  height: 500px;
+  box-shadow: 0 5px 50px rgba (0, 0, 0, 15%);
+  border: 1px solid #ddd;
+}
 
-  .table-style thead tr th{
-    background-color: skyblue;
-    border: 1px solid #ddd;
-  }
+.table-style thead tr th {
+  background-color: skyblue;
+  border: 1px solid #ddd;
+}
 
-  .table-style td{
-    text-align: center;
-  }
+.table-style td {
+  text-align: center;
+}
 
-  .table-style th td{
-    padding: 15px 20px;
-  }
+.table-style th td {
+  padding: 15px 20px;
+}
 
-  .table-style tbody tr td {
-    border: 1px solid #ddd;
-  }
+.table-style tbody tr td {
+  border: 1px solid #ddd;
+}
 
-  .body tr:nth-child(even){
-    background-color: #f3f3f3;
-  }
+.body tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
 
-  .tarif{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
+.tarif {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
-  .abonnement-cards{
-    display: flex;
-    flex-direction: column;
-  }
+.abonnement-cards {
+  display: flex;
+  flex-direction: column;
+}
 
-  .ticket-title h1{
-    align-items: center;
-  }
+.ticket-title h1 {
+  align-items: center;
+}
 
-  .table{
-    display: flex;
-    justify-content: center;
-  }
+.table {
+  display: flex;
+  justify-content: center;
+}
 
-  .ticket-title{
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    border: 1px solid black;
-    text-align: center;
-    background-color: whitesmoke;
-    justify-content: center;
-  }
+.ticket-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  border: 1px solid black;
+  text-align: center;
+  background-color: whitesmoke;
+  justify-content: center;
+}
 
-  .card-text-center{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.card-text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .overflow1 img{
-    width: 100%;
-    height: 50%;
-  }
+.overflow1 img {
+  width: 100%;
+  height: 50%;
+}
 
-  .overflow1 p{
-    font-size: 15px;
-  }
+.overflow1 p {
+  font-size: 15px;
+}
 
-  .overflow2 p{
-    font-size: 15px;
-  }
+.overflow2 p {
+  font-size: 15px;
+}
 
-  .card-title1{
-    text-align: center;
-  }
+.card-title1 {
+  text-align: center;
+}
 
-  .card-title2{
-    text-align: center;
-  }
+.card-title2 {
+  text-align: center;
+}
 
-  .overflow1{
-    width: 95%;
-    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
-  }
+.overflow1 {
+  width: 95%;
+  background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+}
 
-  .overflow2 img{
-    width: 100%;
-    height: 50%;
-  }
+.overflow2 img {
+  width: 100%;
+  height: 50%;
+}
 
-  .overflow2{
-    width: 95%;
-    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
-  }
+.overflow2 {
+  width: 95%;
+  background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+}
 
-  .cards h2{
-    text-align: center;
-  }
-
-
+.cards h2 {
+  text-align: center;
+}
 
 /* Tarifs fin */
 
 /* _____ PAGE TUTORIELS _____ */
 
-.prendreDeposer{
+.prendreDeposer {
   display: flex;
   justify-content: center;
 }
-.explications{
+.explications {
   font-size: 15px;
 }
-.tuto{
+.tuto {
   margin: 5%;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
-  
+
 a:link {
   text-decoration: none;
 }
 
-
-
-
 @media screen and (min-width: 1200px) {
-  
-/* HEADER PC*/
+  /* HEADER PC*/
 
   .logo {
     display: flex;
@@ -422,8 +400,6 @@ a:link {
     color: #fff;
     font-family: var(--text-font);
     font-size: 15px;
-  
-  
   }
 
   .english-flag {
@@ -431,41 +407,33 @@ a:link {
     height: 50%;
   }
 
+  /* SEARCH BAR PC*/
 
+  .search-container {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(0%);
+  }
 
+  .search-bar #searchbar2 {
+    display: block;
+    width: 300px;
+    height: 1.8rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: #6db28fd8;
+    font-family: var(--text-font);
+    font-size: 0.8rem;
+  }
 
-/* SEARCH BAR PC*/
-
-.search-container {
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(0%);
-}
-
-
-.search-bar #searchbar2 {
-  display: block;
-  width: 300px;
-  height: 1.8rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  border-radius: 20px;
-  border: none;
-  background-color: #6db28fd8;
-  font-family: var(--text-font);
-  font-size: 0.8rem;
-}
-
-
-
-.scrolling-search {
-  display: none;
-}
-
-
+  .scrolling-search {
+    display: none;
+  }
 }
 /* _____ Affichage carte leaflet _____ */
 .leaflet-container {
@@ -473,4 +441,3 @@ a:link {
   height: 88vh;
   z-index: 1;
 }
-

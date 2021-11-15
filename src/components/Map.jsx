@@ -9,35 +9,10 @@ import Zoom from '@mui/material/Zoom';
 
 import Geoloc from './Geoloc';
 
-const userMarker = new L.Icon({
-  iconUrl: 'placeholder(1).png',
-  iconSize: [50, 50],
-  iconAnchor: [25, 51],
-  popupAnchor: [0, -53],
-});
-
-const redMarker = new L.Icon({
-  iconUrl: 'redmarker.png',
-  iconSize: [50, 50],
-  iconAnchor: [25, 51],
-  popupAnchor: [0, -53],
-});
-
-const yellowMarker = new L.Icon({
-  iconUrl: 'yellowmarker.png',
-  iconSize: [50, 50],
-  iconAnchor: [25, 51],
-  popupAnchor: [0, -53],
-});
-
-const greenMarker = new L.Icon({
-  iconUrl: 'greenmarker.png',
-  iconSize: [50, 50],
-  iconAnchor: [25, 51],
-  popupAnchor: [0, -53],
-});
-
-function Map() {
+function Map(props) {
+  // eslint-disable-next-line react/prop-types
+  const { count } = props;
+  const location = Geoloc();
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -47,11 +22,33 @@ function Map() {
       .then((data) => setResults(data));
   }, []);
 
-  const location = Geoloc();
+  const userMarker = new L.Icon({
+    iconUrl: 'placeholder(1).png',
+    iconSize: [50, 50],
+  });
+
+  const redMarker = new L.Icon({
+    iconUrl: 'redmarker.png',
+    iconSize: [50, 50],
+  });
+
+  const yellowMarker = new L.Icon({
+    iconUrl: 'yellowmarker.png',
+    iconSize: [50, 50],
+  });
+
+  const greenMarker = new L.Icon({
+    iconUrl: 'greenmarker.png',
+    iconSize: [50, 50],
+  });
 
   return (
     <div>
-      <MapContainer center={[43.6042600, 1.4436700]} zoom={17} scrollWheelZoom={Zoom}>
+      <MapContainer
+        center={[43.604652, 1.444209]}
+        zoom={17}
+        scrollWheelZoom={Zoom}
+      >
         <TileLayer
           tlse0921-js-p2-BikeBuster
           url="https://api.mapbox.com/styles/v1/leoplanelles/ckvm9t3k7k7on15mpslnijx7n/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGVvcGxhbmVsbGVzIiwiYSI6ImNrdm05cnNlYjB4N3Aycm91NW9hNmJvenQifQ.QoNf0EMBb0BFbohQf-VZGA"
@@ -67,7 +64,9 @@ function Map() {
         )}
 
         {results
-          .filter((station) => station.available_bikes <= 5)
+          .filter(
+            (station) => station.available_bikes <= 5 && station.available_bikes >= count,
+          )
           .map((e) => (
             <Marker
               key={e.name}
@@ -85,7 +84,9 @@ function Map() {
 
         {results
           .filter(
-            (station) => station.available_bikes > 5 && station.available_bikes <= 10,
+            (station) => station.available_bikes > 5
+              && station.available_bikes <= 10
+              && station.available_bikes >= count,
           )
           .map((e) => (
             <Marker
@@ -103,7 +104,9 @@ function Map() {
           ))}
 
         {results
-          .filter((station) => station.available_bikes > 10)
+          .filter(
+            (station) => station.available_bikes > 10 && station.available_bikes >= count,
+          )
           .map((e) => (
             <Marker
               key={e.name}
