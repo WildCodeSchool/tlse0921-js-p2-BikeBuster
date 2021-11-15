@@ -32,7 +32,7 @@ function Navigation() {
           <div className="white-button-pc">Tarifs et abonnements</div>
         </Link>
         <Link to="/Apropos">
-          <div className="white-button">
+          <div className="white-button" id="exlamation">
             <AiOutlineExclamationCircle className="icon-menu" />{' '}
           </div>
           <div className="white-button-pc">A propos</div>

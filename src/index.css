@@ -107,6 +107,9 @@ a {
   background-color: white;
 }
 
+#exlamation {
+  transform: rotate(180deg);
+}
 .icon-menu {
   height: 30px;
   width: 30px;
@@ -146,17 +149,26 @@ a {
 
 
 
-.search-bar {
+
+
+.switch-count-container {
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 70%;
-  
+  justify-content: center;
+  align-items: center;
 }
+
+.results-list-bike {
+  display: none;
+}
+
+
 
 .counter {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  
 }
 
 .counter h1 {
@@ -177,6 +189,14 @@ a {
 
 .counter button:hover {
   background-color: #1b834f;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 70%;
+  
 }
 
 .search-bar #searchbar2 {
@@ -234,6 +254,7 @@ a {
   display: none;
 }
 
+
 #button-search-container:checked ~ .search-container {
  transform: translateY(0%);
 }
@@ -245,6 +266,7 @@ a {
   background-color: #6db28f;
   color: white;
 }
+
 
   /* Tarifs debut */
 
