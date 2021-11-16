@@ -3,7 +3,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   //  geocodeByPlaceId,
   getLatLng,
-} from 'react-places-autocomplete';
+} from 'react-google-places-autocomplete';
 
 function SearchFrom() {
   const [address, setAddress] = useState('');
