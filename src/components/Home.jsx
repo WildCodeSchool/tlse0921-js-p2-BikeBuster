@@ -3,24 +3,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import MenuIcon from '@mui/icons-material/Menu';
 import Map from './Map';
 import Count from './Counter';
+import SearchFrom from './SearchFrom';
+import SearchTo from './SearchTo';
 
 function Home() {
   const [count, setCount] = useState(1);
-
-  // function handleMoreBikes() {
-  //   if (count > 1) { setCount((e) => e - 1); }
-  // }
-
-  // function handleLessBikes() {
-  //   if (count < 20) { setCount((e) => e + 1); }
-  // }
-
-  // const memoizedCallback = useCallback(
-  //   () => {
-  //     doSomething(a, b);
-  //   },
-  //   [a, b],
-  // );
 
   const handleMoreBikes = useCallback(() => {
     if (count > 1) {
@@ -50,20 +37,12 @@ function Home() {
           handleLessBikes={handleLessBikes}
         />
         <div className="search-bar">
-          <input
-            type="search"
-            id="searchbar"
-            name="searchbar"
-            autoComplete="address-level4"
-            placeholder="Départ"
-          />
-          <input
-            type="search"
-            id="searchbar2"
-            name="searchbar"
-            autoComplete="address-level4"
-            placeholder="Arrivée"
-          />
+          <div className="departure">
+            <SearchFrom />
+          </div>
+          <div className="arrival">
+            <SearchTo />
+          </div>
           <div className="search-icon">
             <SearchIcon sx={{ fontSize: 25 }} />
           </div>
