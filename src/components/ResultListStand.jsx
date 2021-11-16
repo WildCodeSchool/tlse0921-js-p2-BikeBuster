@@ -39,7 +39,10 @@ const ResultListStand = (props) => {
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
+              {`Places disponibles: ${e.available_bike_stands}`} <br />
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`} target="_blank" rel="noreferrer">
+                Itinéraire
+              </a>
             </Popup>
           </Marker>
         ))}
@@ -60,7 +63,10 @@ const ResultListStand = (props) => {
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
+              {`Places disponibles: ${e.available_bike_stands}`} <br />
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`} target="_blank" rel="noreferrer">
+                Itinéraire
+              </a>
             </Popup>
           </Marker>
         ))}
@@ -80,7 +86,10 @@ const ResultListStand = (props) => {
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
+              {`Places disponibles: ${e.available_bike_stands}`} <br />
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`} target="_blank" rel="noreferrer">
+                Itinéraire
+              </a>
             </Popup>
           </Marker>
         ))}
