@@ -23,19 +23,19 @@ function Navigation() {
           <div className="white-button">
             <AiOutlineBulb className="icon-menu" />{' '}
           </div>
-          <div className="white-button-pc">Tutoriels</div>
+          <h1 className="white-button-pc">Tutoriels</h1>
         </Link>
         <Link to="/Tarifs">
           <div className="white-button">
             <AiOutlineEuro className="icon-menu" />{' '}
           </div>
-          <div className="white-button-pc">Tarifs et abonnements</div>
+          <h1 className="white-button-pc">Tarifs et abonnements</h1>
         </Link>
         <Link to="/Apropos">
           <div className="white-button">
             <AiOutlineExclamationCircle className="icon-menu" />{' '}
           </div>
-          <div className="white-button-pc">A propos</div>
+          <h1 className="white-button-pc">A propos</h1>
         </Link>
         <img className="english-flag" src="/english.png" alt="english flag" />
       </div>
