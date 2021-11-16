@@ -25,7 +25,8 @@ const ResultsListBike = (props) => {
     <div>
       {results
         .filter(
-          (station) => station.available_bikes <= 5 && station.available_bikes >= count,
+          (station) => (station.available_bikes - count) <= 5
+          && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker
@@ -44,8 +45,8 @@ const ResultsListBike = (props) => {
 
       {results
         .filter(
-          (station) => station.available_bikes > 5
-              && station.available_bikes <= 10
+          (station) => (station.available_bikes - count) > 5
+              && (station.available_bikes - count) <= 10
               && station.available_bikes >= count,
         )
         .map((e) => (
@@ -65,7 +66,8 @@ const ResultsListBike = (props) => {
 
       {results
         .filter(
-          (station) => station.available_bikes > 10 && station.available_bikes >= count,
+          (station) => (station.available_bikes - count > 10)
+          && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker

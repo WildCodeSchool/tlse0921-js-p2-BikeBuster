@@ -21,7 +21,7 @@ function SearchTo() {
   };
 
   return (
-    <div className="Searchbar">
+    <>
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}
@@ -67,7 +67,7 @@ function SearchTo() {
           </div>
         )}
       </PlacesAutocomplete>
-    </div>
+    </>
   );
 }
 

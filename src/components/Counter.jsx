@@ -11,7 +11,7 @@ const Count = (props) => {
           -
         </Button>
       </Stack>
-      <h1>{count}</h1>
+      <p>{count}</p>
       <Stack spacing={2} direction="row">
         <Button type="button" onClick={handleLessBikes} variant="contained">
           +

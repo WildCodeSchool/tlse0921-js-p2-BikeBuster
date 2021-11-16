@@ -25,7 +25,9 @@ const ResultListStand = (props) => {
     <div>
       {results
         .filter(
-          (station) => station.available_bike_stands <= 5 && station.available_bike_stands >= count,
+          (station) => (
+            station.available_bike_stands - count) <= 5
+            && station.available_bike_stands >= count,
         )
         .map((e) => (
           <Marker
@@ -44,8 +46,8 @@ const ResultListStand = (props) => {
 
       {results
         .filter(
-          (station) => station.available_bike_stands > 5
-              && station.available_bike_stands <= 10
+          (station) => (station.available_bike_stands - count) > 5
+              && (station.available_bike_stands - count) <= 10
               && station.available_bike_stands >= count,
         )
         .map((e) => (
@@ -65,7 +67,8 @@ const ResultListStand = (props) => {
 
       {results
         .filter(
-          (station) => station.available_bike_stands > 10 && station.available_bike_stands >= count,
+          (station) => (station.available_bike_stands - count) > 10
+          && station.available_bike_stands >= count,
         )
         .map((e) => (
           <Marker
