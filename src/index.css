@@ -142,9 +142,9 @@ a {
   border-radius: 20px;
   z-index: 2;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:center;
   transform: translateY(-120%);
   transition: transform 0.5s linear;
   box-shadow: 1px 1px 5px black;
@@ -152,17 +152,37 @@ a {
 
 .switch-count-container {
   display: flex;
-  align-items: center;
+  align-items:center;
+  justify-content: space-between;
   width: 90%;
+  height: 60%;
+}
+
+.switch-container {
+  display: flex;
+  align-items: flex-end;
+  width: 60%;
   justify-content: space-evenly;
 }
 
-.search-bar {
-  position: relative;
+.switch-container .take-tag {
+  text-align: right;
+}
+
+.count-container {
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  width: 90%;
+  width: 30%;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar .div {
+  width: 100%;
 }
 
 .location-search-input:focus-visible {
@@ -174,7 +194,7 @@ a {
   position: relative;
   display: flex;
   height: 1.8rem;
-  width: 80%;
+  width: 85%;
   padding-right: 1rem;
   padding-left: 1rem;
   border-radius: 20px;
@@ -189,14 +209,21 @@ a {
 .search-bar .autocomplete-dropdown-container {
   position: absolute;
   z-index: auto;
-  top: 45px;
-  left: 0em;
-  width: 100%;
+  top: 102px;
+  left: 1.1rem;
+  width: 90%;
   background-color: white;
   color: var(--green-color);
   font-family: var(--text-font);
   font-size: 1rem;
   font-weight: bolder;
+}
+
+.search-bar .search-icon {
+  width: 10%;
+  height: auto;
+  align-items: center;
+  color: #6db28f;
 }
 
 .search-bar .arrival {
@@ -236,48 +263,6 @@ a {
   background-color: #1b834f;
 }
 
-
-.search-bar {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 70%;
-  
-}
-
-#searchbar2 {
-  display: none;
-}
-
-#searchbar {
-  width: 300px;
-  height: 1.8rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  border-radius: 20px;
-  border: none;
-  background-color: #6db28fd8;
-  font-family: var(--text-font);
-  font-size: 0.8rem;
-  box-shadow: 1px 1px 1px black;
-}
-
-#searchbar:focus-visible {
-  outline: none;
-  border: none;
-  box-shadow: 0 0 2pt 2pt #003f1fd8;
-  outline-width: 0px;
-}
-
-
-
-.search-bar .search-icon {
-  width: 1, 8rem;
-  height: 1, 8rem;
-  margin-left: 0.5rem;
-  color: #6db28f;
-}
-
 .scrolling-search {
   position: absolute;
   z-index: 2;
@@ -311,6 +296,11 @@ a {
   background-color: #6db28f;
   color: white;
 }
+
+
+
+
+
 
 /* _________________ Tarifs debut ______________________ */
 
@@ -421,6 +411,8 @@ a {
 
 /* ____________ Tarifs fin _____________ */
 
+
+
 /* ___________ PAGE TUTORIELS _______________ */
 
 .prendreDeposer {
@@ -500,6 +492,7 @@ a:link {
   /* __________________ SEARCH BAR PC _____________________*/
 
   .search-container {
+    width: 90%;
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -508,60 +501,55 @@ a:link {
     transform: translateY(0%);
   }
 
-
   .switch-count-container {
+    width: 30%;
     display: flex;
-    align-items: center;
-    width: auto;
+    justify-content: center;
   }
 
-  .switch-count-container #deposer{
-margin-right: 20px;
-  }
-
-
-
-  #searchbar2 {
-    display: block;
-    width: 300px;
-    height: 1.8rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    border-radius: 20px;
-    border: none;
-    background-color: #6db28fd8;
-    font-family: var(--text-font);
-    font-size: 0.8rem;
-    box-shadow: 1px 1px 1px black;
+  .search-bar {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .search-bar .arrival {
     display: flex;
+    width: 40%
+  }
+
+  .search-bar .departure {
+    display: flex;
+    width: 40%
+  }
+
+  .search-bar .departure div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-bar .arrival div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .search-bar .departure .autocomplete-dropdown-container {
-    position: absolute;
-    z-index: auto;
-    top: 45px;
-    right: 0em;
-    width: 40%;
+    display: flex;
+    flex-direction: column;
+    left: 38%;
+    width: 30%;
+    top: 100%;
   }
 
   .search-bar .arrival .autocomplete-dropdown-container {
-    position: absolute;
-    z-index: auto;
-    top: 45px;
-    left: 0em;
-    width: 40%;
-
+    display: flex;
+    flex-direction: column;
+    left: 65%;
+    width: 30%;
+    top: 100%;
   }
-
-  #searchbar2:focus-visible {
-    outline: none;
-    border: none;
-    box-shadow: 0 0 2pt 2pt #003f1fd8;
-    outline-width: 0px;
-}
 
   .scrolling-search {
     display: none;
