@@ -42,6 +42,7 @@ function Home() {
   function filterBikeStand() {
     setCheck(!check);
   }
+
   return (
     <div className="globalHome">
       <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
@@ -54,14 +55,18 @@ function Home() {
       </div>
       <div className="search-container">
         <div className="switch-count-container">
-          <div>prendre</div>
-          <GreenSwitch {...label} onClick={filterBikeStand} />
-          <div id="deposer">déposer</div>
-          <Count
-            count={count}
-            handleMoreBikes={handleMoreBikes}
-            handleLessBikes={handleLessBikes}
-          />
+          <div className="switch-container">
+            <p className="take-tag">Prendre</p>
+            <GreenSwitch {...label} onClick={filterBikeStand} />
+            <p id="deposer">Déposer</p>
+          </div>
+          <div className="count-container">
+            <Count
+              count={count}
+              handleMoreBikes={handleMoreBikes}
+              handleLessBikes={handleLessBikes}
+            />
+          </div>
         </div>
         <div className="search-bar">
           <div className="departure">
@@ -70,7 +75,6 @@ function Home() {
           <div className="arrival">
             <SearchTo />
           </div>
-
           <div className="search-icon">
             <SearchIcon sx={{ fontSize: 25 }} />
           </div>

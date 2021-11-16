@@ -3,7 +3,7 @@ import PlacesAutocomplete, {
   geocodeByAddress,
   //  geocodeByPlaceId,
   getLatLng,
-} from 'react-google-places-autocomplete';
+} from 'react-places-autocomplete';
 
 function SearchFrom() {
   const [address, setAddress] = useState('');
@@ -21,7 +21,7 @@ function SearchFrom() {
   };
 
   return (
-    <div className="Searchbar">
+    <>
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}
@@ -67,7 +67,7 @@ function SearchFrom() {
           </div>
         )}
       </PlacesAutocomplete>
-    </div>
+    </>
   );
 }
 
