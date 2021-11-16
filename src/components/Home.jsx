@@ -7,6 +7,9 @@ import { alpha, styled } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
 import Map from './Map';
 import Count from './Counter';
+import SearchFrom from './SearchFrom';
+import SearchTo from './SearchTo';
+
 
 const GreenSwitch = styled(Switch)(({ theme }) => ({
   '& .MuiSwitch-switchBase.Mui-checked': {
@@ -24,6 +27,7 @@ const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 function Home() {
   const [count, setCount] = useState(1);
+
   const handleMoreBikes = useCallback(() => {
     if (count > 1) {
       setCount((e) => e - 1);
@@ -61,6 +65,7 @@ function Home() {
           />
         </div>
         <div className="search-bar">
+
           <input
             type="search"
             id="searchbar"
@@ -75,6 +80,14 @@ function Home() {
             autoComplete="address-level4"
             placeholder="Arrivé"
           />
+
+          <div className="departure">
+            <SearchFrom />
+          </div>
+          <div className="arrival">
+            <SearchTo />
+          </div>
+
           <div className="search-icon">
             <SearchIcon sx={{ fontSize: 25 }} />
           </div>
