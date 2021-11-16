@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  AiOutlineBulb,
+  AiOutlineQuestionCircle,
   AiOutlineEuro,
   AiOutlineExclamationCircle,
 } from 'react-icons/ai';
@@ -21,21 +21,26 @@ function Navigation() {
       <div className="menu">
         <Link to="/Tutoriels">
           <div className="white-button">
-            <AiOutlineBulb className="icon-menu" />{' '}
+            <AiOutlineQuestionCircle className="icon-menu" />{' '}
           </div>
-          <h1 className="white-button-pc">Tutoriels</h1>
+
+          <div className="white-button-pc"><h1>Tutoriels</h1></div>
+
         </Link>
         <Link to="/Tarifs">
           <div className="white-button">
             <AiOutlineEuro className="icon-menu" />{' '}
           </div>
-          <h1 className="white-button-pc">Tarifs et abonnements</h1>
+          <div className="white-button-pc"><h1>Tarifs</h1></div>
+
         </Link>
         <Link to="/Apropos">
-          <div className="white-button">
+          <div className="white-button" id="exlamation">
             <AiOutlineExclamationCircle className="icon-menu" />{' '}
           </div>
-          <h1 className="white-button-pc">A propos</h1>
+
+          <div className="white-button-pc"><h1>A propos</h1></div>
+
         </Link>
         <img className="english-flag" src="/english.png" alt="english flag" />
       </div>
