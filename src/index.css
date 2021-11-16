@@ -525,6 +525,7 @@ margin-right: 20px;
     font-family: var(--text-font);
     font-size: 0.8rem;
     box-shadow: 1px 1px 1px black;
+  }
 
   .search-bar .arrival {
     display: flex;

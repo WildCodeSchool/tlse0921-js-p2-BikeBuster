@@ -10,7 +10,6 @@ import Count from './Counter';
 import SearchFrom from './SearchFrom';
 import SearchTo from './SearchTo';
 
-
 const GreenSwitch = styled(Switch)(({ theme }) => ({
   '& .MuiSwitch-switchBase.Mui-checked': {
     color: green[600],
@@ -65,22 +64,6 @@ function Home() {
           />
         </div>
         <div className="search-bar">
-
-          <input
-            type="search"
-            id="searchbar"
-            name="searchbar"
-            autoComplete="address-level4"
-            placeholder="Départ"
-          />
-          <input
-            type="search"
-            id="searchbar2"
-            name="searchbar"
-            autoComplete="address-level4"
-            placeholder="Arrivé"
-          />
-
           <div className="departure">
             <SearchFrom />
           </div>
