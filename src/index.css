@@ -18,10 +18,11 @@ body {
 }
 
 h1 {
-  width: 80%;
   margin: auto;
   padding: 1rem;
   font-family: var(--title-font);
+  font-size: 1.3rem;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -52,7 +53,8 @@ a {
   text-decoration: none;
 }
 
-/* MENU HEADER MOBILE*/
+/* __________________MENU HEADER MOBILE______________________*/
+
 .container-menu {
   background-color: #72bb90;
   display: flex;
@@ -103,13 +105,16 @@ a {
   background-color: white;
 }
 
+#exlamation {
+  transform: rotate(180deg);
+}
 .icon-menu {
   height: 30px;
   width: 30px;
   color: black;
 }
 
-.white-button-pc {
+.menu .h1 {
   display: none;
 }
 
@@ -117,7 +122,7 @@ a {
   display: none;
 }
 
-/* SEARCH BAR MOBILE */
+/* ______________ SEARCH BAR MOBILE ___________________ */
 
 .search-container {
   position: absolute;
@@ -125,11 +130,11 @@ a {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
   width: 80%;
   height: 100px;
   background-color: rgb(255, 255, 255);
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-radius: 20px;
   z-index: 2;
   display: flex;
   flex-direction: column-reverse;
@@ -137,18 +142,73 @@ a {
   justify-content: space-evenly;
   transform: translateY(-110%);
   transition: transform 0.5s linear;
+  box-shadow: 1px 1px 5px black;
+}
+
+.switch-count-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  justify-content: space-evenly;
 }
 
 .search-bar {
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
-  width: 70%;
+  width: 90%;
+}
+
+.location-search-input:focus-visible {
+  outline: solid 2px #519774;
+  border: none;
+}
+
+.search-bar .location-search-input {
+  position: relative;
+  display: flex;
+  height: 1.8rem;
+  width: 80%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--green-color);
+  color: white;
+  font-family: var(--text-font);
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.search-bar .autocomplete-dropdown-container {
+  position: absolute;
+  z-index: auto;
+  top: 45px;
+  left: 0em;
+  width: 100%;
+  background-color: white;
+  color: var(--green-color);
+  font-family: var(--text-font);
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.search-bar .arrival {
+  display: none;
+}
+
+
+.switch-count-container div{
+  font-family:var(--text-font);
+  font-weight: bold;
 }
 
 .counter {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  
 }
 
 .counter h1 {
@@ -171,11 +231,20 @@ a {
   background-color: #1b834f;
 }
 
-.search-bar #searchbar2 {
+
+.search-bar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 70%;
+  
+}
+
+#searchbar2 {
   display: none;
 }
 
-.search-bar #searchbar {
+#searchbar {
   width: 300px;
   height: 1.8rem;
   padding-right: 1rem;
@@ -185,12 +254,17 @@ a {
   background-color: #6db28fd8;
   font-family: var(--text-font);
   font-size: 0.8rem;
+  box-shadow: 1px 1px 1px black;
 }
 
 #searchbar:focus-visible {
   outline: none;
   border: none;
+  box-shadow: 0 0 2pt 2pt #003f1fd8;
+  outline-width: 0px;
 }
+
+
 
 .search-bar .search-icon {
   width: 1, 8rem;
@@ -198,11 +272,13 @@ a {
   margin-left: 0.5rem;
   color: #6db28f;
 }
+
 .scrolling-search {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   left: 0;
   right: 0;
+  top: 106px;
   margin-left: auto;
   margin-right: auto;
   transition: 0.5s linear;
@@ -213,11 +289,13 @@ a {
   width: 60%;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  box-shadow: 1px 1px 3px black;
 }
 
 #button-search-container {
   display: none;
 }
+
 
 #button-search-container:checked ~ .search-container {
   transform: translateY(0%);
@@ -230,7 +308,7 @@ a {
   color: white;
 }
 
-/* Tarifs debut */
+/* _________________ Tarifs debut ______________________ */
 
 .table-style {
   border-collapse: collapse;
@@ -337,9 +415,9 @@ a {
   text-align: center;
 }
 
-/* Tarifs fin */
+/* ____________ Tarifs fin _____________ */
 
-/* _____ PAGE TUTORIELS _____ */
+/* ___________ PAGE TUTORIELS _______________ */
 
 .prendreDeposer {
   display: flex;
@@ -359,9 +437,9 @@ a:link {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1200px) {
-  /* HEADER PC*/
+/* _______________ HEADER PC _____________*/
 
+@media screen and (min-width: 1200px) {
   .logo {
     display: flex;
     flex-direction: row;
@@ -394,12 +472,16 @@ a:link {
     display: none;
   }
 
-  .white-button-pc {
+  .menu .h1 {
     display: flex;
     justify-content: space-between;
     color: #fff;
     font-family: var(--text-font);
-    font-size: 15px;
+    font-size: 10px;
+  }
+
+  .white-button-pc h1:hover {
+    transform: translateY(-10%);
   }
 
   .english-flag {
@@ -407,18 +489,31 @@ a:link {
     height: 50%;
   }
 
-  /* SEARCH BAR PC*/
+  /* __________________ SEARCH BAR PC _____________________*/
 
   .search-container {
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     transform: translateY(0%);
   }
 
-  .search-bar #searchbar2 {
+
+  .switch-count-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .switch-count-container #deposer{
+margin-right: 20px;
+  }
+
+
+
+  #searchbar2 {
     display: block;
     width: 300px;
     height: 1.8rem;
@@ -429,13 +524,43 @@ a:link {
     background-color: #6db28fd8;
     font-family: var(--text-font);
     font-size: 0.8rem;
+    box-shadow: 1px 1px 1px black;
+
+  .search-bar .arrival {
+    display: flex;
   }
+
+  .search-bar .departure .autocomplete-dropdown-container {
+    position: absolute;
+    z-index: auto;
+    top: 45px;
+    right: 0em;
+    width: 40%;
+  }
+
+  .search-bar .arrival .autocomplete-dropdown-container {
+    position: absolute;
+    z-index: auto;
+    top: 45px;
+    left: 0em;
+    width: 40%;
+
+  }
+
+  #searchbar2:focus-visible {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 2pt 2pt #003f1fd8;
+    outline-width: 0px;
+}
 
   .scrolling-search {
     display: none;
   }
 }
+
 /* _____ Affichage carte leaflet _____ */
+
 .leaflet-container {
   width: 100vw;
   height: 88vh;
