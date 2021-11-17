@@ -39,24 +39,20 @@ function Home() {
   }, [count]);
   const [check, setCheck] = useState(false);
 
-
-  function filterBikeStand() {
-    setCheck(!check);
-  }
-
   const filterBikeStand = useCallback(() => {
     setCheck(!check);
   }, [check]);
 
-
   return (
     <div className="globalHome">
-      <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
+      <>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+      </>
       <input id="button-search-container" type="checkbox" />
       <div className="scrolling-search">
-
-        <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
-
+        <>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        </>
 
         <label htmlFor="button-search-container">
           <ArrowDownwardIcon />
