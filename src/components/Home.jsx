@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-bind */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import { React, useState, useCallback } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -39,16 +39,14 @@ function Home() {
   }, [count]);
   const [check, setCheck] = useState(false);
 
-  function filterBikeStand() {
+  const filterBikeStand = useCallback(() => {
     setCheck(!check);
-  }
+  }, [check]);
 
   return (
     <div className="globalHome">
-      <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
       <input id="button-search-container" type="checkbox" />
       <div className="scrolling-search">
-        <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
         <label htmlFor="button-search-container">
           <ArrowDownwardIcon />
         </label>
