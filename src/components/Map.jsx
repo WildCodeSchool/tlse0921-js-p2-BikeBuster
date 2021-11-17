@@ -9,10 +9,11 @@ import Zoom from '@mui/material/Zoom';
 import ResultListStand from './ResultListStand';
 import ResultListBike from './ResultListBike';
 import LocationMarker from './LocationMarker';
+import ItineraryMarker from './ItineraryMarker';
 
 function Map(props) {
   // eslint-disable-next-line react/prop-types
-  const { count, check } = props;
+  const { count, check, click } = props;
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -38,6 +39,7 @@ function Map(props) {
         {check && <ResultListStand results={results} count={count} />};
 
         <LocationMarker />
+        <ItineraryMarker click={click} />
       </MapContainer>
     </div>
   );

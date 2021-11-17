@@ -185,16 +185,11 @@ a {
   width: 100%;
 }
 
-.location-search-input:focus-visible {
-  outline: solid 2px #519774;
-  border: none;
-}
-
 .search-bar .location-search-input {
   position: relative;
   display: flex;
   height: 1.8rem;
-  width: 85%;
+  width: 84%;
   padding-right: 1rem;
   padding-left: 1rem;
   border-radius: 20px;
@@ -204,6 +199,15 @@ a {
   font-family: var(--text-font);
   font-weight: bolder;
   font-size: 1rem;
+}
+
+.location-search-input:focus-visible {
+  outline: solid 2px #519774;
+  border: none;
+}
+
+.location-search-input::placeholder {
+  font-size: .8rem;
 }
 
 .search-bar .autocomplete-dropdown-container {
@@ -219,17 +223,18 @@ a {
   font-weight: bolder;
 }
 
+.search-bar button {
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: #d3f0e1;
+}
+
 .search-bar .search-icon {
-  width: 10%;
-  height: auto;
   align-items: center;
   color: #6db28f;
 }
-
-.search-bar .arrival {
-  display: none;
-}
-
 
 .switch-count-container div{
   font-family:var(--text-font);
@@ -497,7 +502,7 @@ a:link {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     transform: translateY(0%);
   }
 
@@ -508,45 +513,25 @@ a:link {
   }
 
   .search-bar {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-evenly;
   }
 
-  .search-bar .arrival {
-    display: flex;
-    width: 40%
-  }
-
-  .search-bar .departure {
-    display: flex;
-    width: 40%
-  }
-
-  .search-bar .departure div {
-    width: 100%;
+  .search-bar div {
+    width: 90%;
     display: flex;
     justify-content: center;
   }
 
-  .search-bar .arrival div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .search-bar .location-search-input {
+    width: 95%
   }
 
-  .search-bar .departure .autocomplete-dropdown-container {
+  .search-bar .autocomplete-dropdown-container {
     display: flex;
     flex-direction: column;
     left: 38%;
-    width: 30%;
-    top: 100%;
-  }
-
-  .search-bar .arrival .autocomplete-dropdown-container {
-    display: flex;
-    flex-direction: column;
-    left: 65%;
     width: 30%;
     top: 100%;
   }
