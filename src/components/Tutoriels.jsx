@@ -61,7 +61,6 @@ function Tutoriels() {
             </div>
           </div>
         )}
-        ;
         {click && (
           <div className="deposer">
             <div className="vidéotutodeposer">
