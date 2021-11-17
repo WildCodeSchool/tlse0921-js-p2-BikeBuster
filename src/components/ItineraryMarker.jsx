@@ -15,11 +15,6 @@ function ItineraryMarker() {
 
   const map = useMap();
 
-  // function flyTo() {
-  //   if (click) {
-  //     map.flyTo(coordinates, map.getZoom());
-  // }
-
   useEffect(() => {
     if (coordinates) {
       map.flyTo(coordinates, map.getZoom());
