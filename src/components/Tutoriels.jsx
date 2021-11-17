@@ -42,8 +42,7 @@ function Tutoriels() {
                 title="video"
               />
             </div>
-            <div className="etapesprendre">
-              <h3>Les étapes</h3>
+            <div className="etapes">
               <h4>Etape 1 :</h4>
               <p className="explications">
                 Trouver une station avec un vélo disponible et en bon état.
@@ -74,8 +73,7 @@ function Tutoriels() {
                 title="video"
               />
             </div>
-            <div className="etapesdeposer">
-              <h3>Les étapes</h3>
+            <div className="etapes">
               <h4>Etape 1 :</h4>
               <p className="explications">
                 Devant un empacement libre, enclenchez votre vélo.
@@ -88,7 +86,7 @@ function Tutoriels() {
               <h4>Attention</h4>
               <p className="explications">
                 Si votre vélo est mal enclenché, le bip sera permanent
-                <p>Votre responsabilité sera engagée. Essayez à nouveau.</p>
+                Votre responsabilité sera engagée. Essayez à nouveau.
               </p>
             </div>
           </div>

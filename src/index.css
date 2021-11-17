@@ -40,6 +40,12 @@ h3 {
   padding: 1rem;
   font-family: var(--title-font);
 }
+h4 {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  font-family: var(--title-font);
+}
 
 p {
   width: 80%;
@@ -421,26 +427,29 @@ a {
 img{
   height: 20%;
   width: 20%;
+  padding-top: 8px;
+}
+.imagetuto{
+  display: flex;
+  justify-content: center;
 }
 .prendreDeposer{
   display: flex;
   align-items: center;
 }
-.videotutoprendre{
-  display: flex;
-  justify-content: center;
+iframe{
+  height: 300px;
+  width: 100%;
 }
-.videotutodeposer{
-  display: flex;
-  justify-content: center;
-}
-.etapesprendre{
+.etapes{
   display: flex;
   flex-direction: column;
-  padding: 2%;
+  align-items: center;
 }
-
-
+h4{
+  display: flex;
+  justify-content: center;
+}
 
 /* _______________ HEADER PC _____________*/
 
@@ -564,7 +573,29 @@ img{
     display: none;
   }
   /* _____ Tuto _____ */
-  
+  iframe{
+    height: 300px;
+    width: 450px;
+  }
+  .prendre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 8%;
+    margin-top: 5%;
+  }
+  .deposer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 8%;
+    margin-top: 5%;
+  }
+  img{
+    height: 10%;
+    width: 10%;
+    margin-top: 8px;
+  }
 }
 
 /* _____ Affichage carte leaflet _____ */
