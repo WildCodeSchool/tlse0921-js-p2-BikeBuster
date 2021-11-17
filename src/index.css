@@ -456,6 +456,11 @@ hr {
 #Apropos-title {
   text-align: center;
 }
+
+.carousell {
+  margin-top: 10%;
+  width: 100%;
+}
 /* _______________ HEADER PC _____________*/
 
 @media screen and (min-width: 1200px) {
@@ -604,6 +609,13 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .carousell {
+    height: 70%;
+    width: 800px;
+    margin-left: 23%;
+    margin-top: 5%;
   }
 
   /*_____Tarif____*/
