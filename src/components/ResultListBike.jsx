@@ -25,7 +25,8 @@ const ResultsListBike = (props) => {
     <div>
       {results
         .filter(
-          (station) => station.available_bikes <= 5 && station.available_bikes >= count,
+          (station) => (station.available_bikes - count) <= 5
+          && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker
@@ -37,15 +38,18 @@ const ResultsListBike = (props) => {
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
+              {`Places disponibles: ${e.available_bike_stands}`} <br />
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`} target="_blank" rel="noreferrer">
+                Itinéraire
+              </a>
             </Popup>
           </Marker>
         ))}
 
       {results
         .filter(
-          (station) => station.available_bikes > 5
-              && station.available_bikes <= 10
+          (station) => (station.available_bikes - count) > 5
+              && (station.available_bikes - count) <= 10
               && station.available_bikes >= count,
         )
         .map((e) => (
@@ -58,14 +62,18 @@ const ResultsListBike = (props) => {
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
+              {`Places disponibles: ${e.available_bike_stands}`} <br />
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`} target="_blank" rel="noreferrer">
+                Itinéraire
+              </a>
             </Popup>
           </Marker>
         ))}
 
       {results
         .filter(
-          (station) => station.available_bikes > 10 && station.available_bikes >= count,
+          (station) => (station.available_bikes - count > 10)
+          && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker
@@ -77,7 +85,10 @@ const ResultsListBike = (props) => {
               {`Station ${e.name.replace(/[0-9]/gi, '').replace('-', '')}`}{' '}
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
-              {`Places disponibles: ${e.available_bike_stands}`}
+              {`Places disponibles: ${e.available_bike_stands}`} <br />
+              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`} target="_blank" rel="noreferrer">
+                Itinéraire
+              </a>
             </Popup>
           </Marker>
         ))}
