@@ -34,11 +34,13 @@ function Home() {
       setCount((e) => e - 1);
     }
   }, [count]);
+
   const handleLessBikes = useCallback(() => {
     if (count < 20) {
       setCount((e) => e + 1);
     }
   }, [count]);
+
   const [check, setCheck] = useState(false);
 
   const filterBikeStand = useCallback(() => {
@@ -46,15 +48,25 @@ function Home() {
   }, [check]);
 
   const [coordinates, setCoordinates] = useState(null);
+  const [itinerary, setItinerary] = useState(null);
+  const [placeId, setPlaceId] = useState(null);
+  const [address, setAddress] = useState(null);
 
   const [click, setClick] = useState(false);
 
-  function handleClick() {
-    setClick(true);
-  }
-
   return (
-    <LocalisationContext.Provider value={{ coordinates, setCoordinates }}>
+    <LocalisationContext.Provider
+      value={{
+        coordinates,
+        itinerary,
+        placeId,
+        address,
+        setCoordinates,
+        setItinerary,
+        setPlaceId,
+        setAddress,
+      }}
+    >
       <div className="globalHome">
         <>
           {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
@@ -84,7 +96,7 @@ function Home() {
             </div>
           </div>
           <div className="search-bar">
-            <SearchBar click={click} handleClick={handleClick} />
+            <SearchBar setClick={setClick} />
           </div>
         </div>
         <div className="map">
