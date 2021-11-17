@@ -415,49 +415,7 @@ a {
 
 /* ___________ PAGE TUTORIELS _______________ */
 
-@media screen and (min-width: 736px){
-  .prendre{
 
-  }
-}
-iframe{
-  height: 100%;
-  width: 140%;
-}
-.titreprendre{
-  text-align: end;
-}
-.prendreDeposer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.explications {
-  font-size: 15px;
-}
-img{
-  height: 20%%;
-  width: 20%;
-}
-.imagetuto{
-  display: flex;
-  justify-content: center;
-  padding: 3%;
-}
-.prendre {
-  margin: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-.déposer {
-  margin: 5%;
-  display: flex;
-  justify-content: space-between;
-}
-
-a:link {
-  text-decoration: none;
-}
 
 /* _______________ HEADER PC _____________*/
 
@@ -579,6 +537,46 @@ a:link {
 
   .scrolling-search {
     display: none;
+  }
+  /* _____ Tuto destop_____ */
+  
+  iframe{
+    height: 100%;
+    width: 140%;
+  }
+  .titreprendre{
+    text-align: end;
+  }
+  .prendreDeposer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .explications {
+    font-size: 15px;
+  }
+  img{
+    height: 20%;
+    width: 20%;
+  }
+  .imagetuto{
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+  }
+  .prendre {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .déposer {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  a:link {
+    text-decoration: none;
   }
 }
 

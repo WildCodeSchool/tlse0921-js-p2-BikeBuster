@@ -93,7 +93,6 @@ function Tutoriels() {
             </div>
           </div>
         )}
-        ;
       </div>
       <div className="imagetuto">
         <img src="/imgtuto.svg" alt="" />
