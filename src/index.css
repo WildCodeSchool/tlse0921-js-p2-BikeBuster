@@ -123,10 +123,6 @@ a {
   display: none;
 }
 
-.english-flag {
-  display: none;
-}
-
 /* ______________ SEARCH BAR MOBILE ___________________ */
 
 .search-container {
@@ -144,7 +140,7 @@ a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items:center;
+  align-items: center;
   transform: translateY(-120%);
   transition: transform 0.5s linear;
   box-shadow: 1px 1px 5px black;
@@ -152,7 +148,7 @@ a {
 
 .switch-count-container {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
   width: 90%;
   height: 60%;
@@ -230,9 +226,8 @@ a {
   display: none;
 }
 
-
-.switch-count-container div{
-  font-family:var(--text-font);
+.switch-count-container div {
+  font-family: var(--text-font);
   font-weight: bold;
 }
 
@@ -240,7 +235,6 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
 }
 
 .counter h1 {
@@ -285,7 +279,6 @@ a {
   display: none;
 }
 
-
 #button-search-container:checked ~ .search-container {
   transform: translateY(0%);
 }
@@ -296,11 +289,6 @@ a {
   background-color: #6db28f;
   color: white;
 }
-
-
-
-
-
 
 /* _________________ Tarifs debut ______________________ */
 
@@ -411,8 +399,6 @@ a {
 
 /* ____________ Tarifs fin _____________ */
 
-
-
 /* ___________ PAGE TUTORIELS _______________ */
 
 .prendreDeposer {
@@ -444,11 +430,10 @@ a:link {
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 15px;
-  padding-bottom:15px;
+  padding-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 .Apropos-card p {
@@ -488,7 +473,6 @@ a:link {
   }
 
   .menu {
-    justify-content: space-between;
     padding-right: 1rem;
     width: 40%;
     font-size: 0.8rem;
@@ -512,11 +496,6 @@ a:link {
 
   .white-button-pc h1:hover {
     transform: translateY(-10%);
-  }
-
-  .english-flag {
-    display: block;
-    height: 50%;
   }
 
   /* __________________ SEARCH BAR PC _____________________*/
@@ -545,12 +524,12 @@ a:link {
 
   .search-bar .arrival {
     display: flex;
-    width: 40%
+    width: 40%;
   }
 
   .search-bar .departure {
     display: flex;
-    width: 40%
+    width: 40%;
   }
 
   .search-bar .departure div {
@@ -585,21 +564,18 @@ a:link {
     display: none;
   }
 
+  /* _____ A propos PC _____ */
 
-/* _____ A propos PC _____ */
+  .Apropos-card {
+    height: 200px;
+    width: 70%;
+  }
 
-.Apropos-card {
-  height: 200px;
-  width: 50%;
-}
-
-.Apropos-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-
+  .Apropos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 /* _____ Affichage carte leaflet _____ */
