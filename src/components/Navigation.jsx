@@ -24,25 +24,27 @@ function Navigation() {
             <AiOutlineQuestionCircle className="icon-menu" />{' '}
           </div>
 
-          <div className="white-button-pc"><h1>Tutoriels</h1></div>
-
+          <div className="white-button-pc">
+            <h1>Tutoriels</h1>
+          </div>
         </Link>
         <Link to="/Tarifs">
           <div className="white-button">
             <AiOutlineEuro className="icon-menu" />{' '}
           </div>
-          <div className="white-button-pc"><h1>Tarifs</h1></div>
-
+          <div className="white-button-pc">
+            <h1>Tarifs</h1>
+          </div>
         </Link>
         <Link to="/Apropos">
           <div className="white-button" id="exlamation">
             <AiOutlineExclamationCircle className="icon-menu" />{' '}
           </div>
 
-          <div className="white-button-pc"><h1>A propos</h1></div>
-
+          <div className="white-button-pc">
+            <h1>A propos</h1>
+          </div>
         </Link>
-        <img className="english-flag" src="/english.png" alt="english flag" />
       </div>
     </div>
   );

@@ -5,12 +5,15 @@ import img2 from '../assets/velotoulouse.jpeg';
 
 const Tarifs = () => (
   <div className="tarif">
-    <div>
+    <div className="tarifTable">
       <div className="ticket-title">
-        <h1>Tickets <FaMoneyBillAlt /></h1>
-        Pour rouler en toute tranquillité,
-        pensez à consulter les tarifs avant
+        <h1>
+          Tickets <FaMoneyBillAlt />
+        </h1>
+        Pour rouler en toute tranquillité, pensez à consulter les tarifs avant
         de partir à vélo et faites votre itinéraire.
+        <br />
+        <br />
       </div>
       <div className="table">
         <table className="table-style">
@@ -93,20 +96,29 @@ const Tarifs = () => (
     </div>
     <br />
     <div className="cards">
+      <hr />
       <h2>Abonnement</h2>
       <div className="card-text-center">
         <div className="overflow1">
           <img src={img1} alt="image2" />
           <h2 className="card-title1">Abonnement mensuel</h2>
           <p>
-            Souple, l abonnement mensuel vous permet d utiliser
-            le service selon vos besoins tout en profitant des avantages de la carte d abonné.
-            Celle-ci vous permet de prendre un vélo rapidement et de vous déplacer d’une station
-            à l’autre en quelques minutes.
+            Souple, l abonnement mensuel vous permet d utiliser le service selon
+            vos besoins tout en profitant des avantages de la carte d abonné.
+            Celle-ci vous permet de prendre un vélo rapidement et de vous
+            déplacer d’une station à l’autre en quelques minutes.
           </p>
           <br />
           <br />
-          <a href="http://www.velo.toulouse.fr/Abonnements-et-Tickets/Abonnements/Abonnement-mensuel2" onClick="window.open(this.href);return false;" className="button1">Voir le site</a>
+          <div className="buttonTarif">
+            <a
+              href="http://www.velo.toulouse.fr/Abonnements-et-Tickets/Abonnements/Abonnement-mensuel2"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <button type="button">Voir le site</button>{' '}
+            </a>
+          </div>
           <br />
           <br />
         </div>
@@ -118,13 +130,22 @@ const Tarifs = () => (
           <img src={img2} alt="image2" />
           <h2 className="card-title2">Abonnement annuel</h2>
           <p>
-            Simple d utilisation, l abonnement annuel vous permet de louer un vélo rapidement.
-            Il suffit de passer sa carte directement sur le lecteur de la borne.
-            Vous pouvez ainsi vous déplacer d’une station à l’autre en quelques minutes.
+            Simple d utilisation, l abonnement annuel vous permet de louer un
+            vélo rapidement. Il suffit de passer sa carte directement sur le
+            lecteur de la borne. Vous pouvez ainsi vous déplacer d’une station à
+            l’autre en quelques minutes.
             <br />
             <br />
           </p>
-          <a href="http://www.velo.toulouse.fr/Abonnements-et-Tickets/Abonnements/Abonnement-mensuel2" onClick="window.open(this.href);return false;" className="button2">Voir le site</a>
+          <div className="buttonTarif">
+            <a
+              href="http://www.velo.toulouse.fr/Abonnements-et-Tickets/Abonnements/Abonnement-mensuel2"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <button type="button">Voir le site</button>
+            </a>
+          </div>
           <br />
           <br />
         </div>
@@ -133,6 +154,5 @@ const Tarifs = () => (
       </div>
     </div>
   </div>
-
 );
 export default Tarifs;
