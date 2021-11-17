@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { Marker, Popup } from 'react-leaflet';
 
 import L from 'leaflet';
@@ -25,8 +25,10 @@ const ResultListStand = (props) => {
     <div>
       {results
         .filter(
+
           (station) => (
             station.available_bike_stands - count) <= 5
+
             && station.available_bike_stands >= count,
         )
         .map((e) => (
@@ -40,7 +42,9 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
+
               <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`} target="_blank" rel="noreferrer">
+
                 Itinéraire
               </a>
             </Popup>
@@ -49,9 +53,11 @@ const ResultListStand = (props) => {
 
       {results
         .filter(
+
           (station) => (station.available_bike_stands - count) > 5
               && (station.available_bike_stands - count) <= 10
               && station.available_bike_stands >= count,
+
         )
         .map((e) => (
           <Marker
@@ -64,7 +70,9 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
+
               <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`} target="_blank" rel="noreferrer">
+
                 Itinéraire
               </a>
             </Popup>
@@ -73,8 +81,10 @@ const ResultListStand = (props) => {
 
       {results
         .filter(
+
           (station) => (station.available_bike_stands - count) > 10
           && station.available_bike_stands >= count,
+
         )
         .map((e) => (
           <Marker
@@ -87,7 +97,9 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
+
               <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`} target="_blank" rel="noreferrer">
+
                 Itinéraire
               </a>
             </Popup>
