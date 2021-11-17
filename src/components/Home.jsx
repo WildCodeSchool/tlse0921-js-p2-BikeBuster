@@ -41,9 +41,9 @@ function Home() {
   }, [count]);
   const [check, setCheck] = useState(false);
 
-  function filterBikeStand() {
+  const filterBikeStand = useCallback(() => {
     setCheck(!check);
-  }
+  }, [check]);
 
   const [coordinates, setCoordinates] = useState(null);
 
@@ -56,10 +56,14 @@ function Home() {
   return (
     <LocalisationContext.Provider value={{ coordinates, setCoordinates }}>
       <div className="globalHome">
-        <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
+        <>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        </>
         <input id="button-search-container" type="checkbox" />
         <div className="scrolling-search">
-          <>{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
+          <>
+            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+          </>
           <label htmlFor="button-search-container">
             <ArrowDownwardIcon />
           </label>

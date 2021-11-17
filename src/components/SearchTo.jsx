@@ -1,31 +1,24 @@
 /* eslint-disable no-console */
-import React, { useState, useContext } from 'react';
-
-import SearchIcon from '@mui/icons-material/Search';
-
+import React, { useState } from 'react';
 import PlacesAutocomplete, {
   geocodeByAddress,
   //  geocodeByPlaceId,
   getLatLng,
 } from 'react-places-autocomplete';
 
-import LocalisationContext from '../context/LocalisationContext';
-
-function SearchBar({ handleClick }) {
-  const { coordinates, setCoordinates } = useContext(LocalisationContext);
-
+function SearchTo() {
   const [address, setAddress] = useState('');
+  const [coordinates, setCoordinates] = useState({
+    lat: null,
+    lng: null,
+  });
 
   const handleSelect = async (value) => {
-    try {
-      const result = await geocodeByAddress(value);
-      const ll = await getLatLng(result[0]);
-      setAddress(value);
-      setCoordinates(ll);
-      console.log(coordinates);
-    } catch (err) {
-      console.log(err);
-    }
+    const result = await geocodeByAddress(value);
+    const ll = await getLatLng(result[0]);
+    setAddress(value);
+    setCoordinates(ll);
+    console.log(coordinates);
   };
 
   return (
@@ -41,7 +34,7 @@ function SearchBar({ handleClick }) {
           <div key={suggestions.description}>
             <input
               {...getInputProps({
-                placeholder: 'Stations à proximité de ...',
+                placeholder: 'Arrivée',
                 className: 'location-search-input',
               })}
             />
@@ -75,18 +68,8 @@ function SearchBar({ handleClick }) {
           </div>
         )}
       </PlacesAutocomplete>
-      <button
-        type="button"
-        className="search-icon"
-        onClick={() => {
-          handleSelect(address);
-          handleClick();
-        }}
-      >
-        <SearchIcon sx={{ fontSize: 25 }} />
-      </button>
     </>
   );
 }
 
-export default SearchBar;
+export default SearchTo;
