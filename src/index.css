@@ -18,10 +18,11 @@ body {
 }
 
 h1 {
-  width: 80%;
   margin: auto;
   padding: 1rem;
   font-family: var(--title-font);
+  font-size: 1.3rem;
+  color: white;
   display: flex;
   justify-content: center;
 }
@@ -52,7 +53,8 @@ a {
   text-decoration: none;
 }
 
-/* MENU HEADER MOBILE*/
+/* __________________MENU HEADER MOBILE______________________*/
+
 .container-menu {
   background-color: #72bb90;
   display: flex;
@@ -103,13 +105,21 @@ a {
   background-color: white;
 }
 
+.white-button-pc {
+  display: none;
+}
+
+#exlamation {
+  transform: rotate(180deg);
+}
+
 .icon-menu {
   height: 30px;
   width: 30px;
   color: black;
 }
 
-.white-button-pc {
+.menu .h1 {
   display: none;
 }
 
@@ -117,7 +127,7 @@ a {
   display: none;
 }
 
-/* SEARCH BAR MOBILE */
+/* ______________ SEARCH BAR MOBILE ___________________ */
 
 .search-container {
   position: absolute;
@@ -125,30 +135,112 @@ a {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1rem;
   width: 80%;
   height: 100px;
   background-color: rgb(255, 255, 255);
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-radius: 20px;
   z-index: 2;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-evenly;
-  transform: translateY(-110%);
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items:center;
+  transform: translateY(-120%);
   transition: transform 0.5s linear;
+  box-shadow: 1px 1px 5px black;
+}
+
+.switch-count-container {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  width: 90%;
+  height: 60%;
+}
+
+.switch-container {
+  display: flex;
+  align-items: flex-end;
+  width: 60%;
+  justify-content: space-evenly;
+}
+
+.switch-container .take-tag {
+  text-align: right;
+}
+
+.count-container {
+  display: flex;
+  justify-content: center;
+  width: 30%;
 }
 
 .search-bar {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  width: 70%;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar .div {
+  width: 100%;
+}
+
+.location-search-input:focus-visible {
+  outline: solid 2px #519774;
+  border: none;
+}
+
+.search-bar .location-search-input {
+  position: relative;
+  display: flex;
+  height: 1.8rem;
+  width: 85%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--green-color);
+  color: white;
+  font-family: var(--text-font);
+  font-weight: bolder;
+  font-size: 1rem;
+}
+
+.search-bar .autocomplete-dropdown-container {
+  position: absolute;
+  z-index: auto;
+  top: 102px;
+  left: 1.1rem;
+  width: 90%;
+  background-color: white;
+  color: var(--green-color);
+  font-family: var(--text-font);
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.search-bar .search-icon {
+  width: 10%;
+  height: auto;
+  align-items: center;
+  color: #6db28f;
+}
+
+.search-bar .arrival {
+  display: none;
+}
+
+
+.switch-count-container div{
+  font-family:var(--text-font);
+  font-weight: bold;
 }
 
 .counter {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  
 }
 
 .counter h1 {
@@ -171,36 +263,9 @@ a {
   background-color: #1b834f;
 }
 
-.search-bar #searchbar2 {
-  display: none;
-}
-
-.search-bar #searchbar {
-  width: 300px;
-  height: 1.8rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  border-radius: 20px;
-  border: none;
-  background-color: #6db28fd8;
-  font-family: var(--text-font);
-  font-size: 0.8rem;
-}
-
-#searchbar:focus-visible {
-  outline: none;
-  border: none;
-}
-
-.search-bar .search-icon {
-  width: 1, 8rem;
-  height: 1, 8rem;
-  margin-left: 0.5rem;
-  color: #6db28f;
-}
 .scrolling-search {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -213,24 +278,31 @@ a {
   width: 60%;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+  box-shadow: 1px 1px 3px black;
 }
 
 #button-search-container {
   display: none;
 }
 
+
 #button-search-container:checked ~ .search-container {
   transform: translateY(0%);
 }
 
 #button-search-container:checked ~ .scrolling-search {
-  margin-top: 100px;
+  margin-top: 120px;
   width: 20%;
   background-color: #6db28f;
   color: white;
 }
 
-/* Tarifs debut */
+
+
+
+
+
+/* _________________ Tarifs debut ______________________ */
 
 .table-style {
   border-collapse: collapse;
@@ -241,8 +313,9 @@ a {
 }
 
 .table-style thead tr th {
-  background-color: skyblue;
+  background-color: var(--green-color);
   border: 1px solid #ddd;
+  font-family: var(--text-font);
 }
 
 .table-style td {
@@ -254,17 +327,20 @@ a {
 }
 
 .table-style tbody tr td {
-  border: 1px solid #ddd;
+  border: 1px solid whitesmoke;
+  font-family: var(--text-font);
 }
 
 .body tr:nth-child(even) {
-  background-color: #f3f3f3;
+  background-color: var(--green-color);
+  opacity: 0.8;
 }
 
 .tarif {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 5%;
 }
 
 .abonnement-cards {
@@ -274,6 +350,7 @@ a {
 
 .ticket-title h1 {
   align-items: center;
+  font-family: var(--title-font);
 }
 
 .table {
@@ -285,10 +362,12 @@ a {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: var(--green-color);
   justify-content: center;
+  font-family: var(--title-font);
+  margin-bottom: 1%;
 }
 
 .card-text-center {
@@ -321,6 +400,7 @@ a {
 .overflow1 {
   width: 95%;
   background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+  font-family: var(--text-font);
 }
 
 .overflow2 img {
@@ -331,15 +411,28 @@ a {
 .overflow2 {
   width: 95%;
   background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+  font-family: var(--text-font);
 }
 
 .cards h2 {
   text-align: center;
 }
 
-/* Tarifs fin */
+.buttonTarif{
+  display: flex;
+  justify-content: center;
+  font-family: var(--text-font);
+}
 
-/* _____ PAGE TUTORIELS _____ */
+hr{
+  width: 50%;
+}
+
+/* ____________ Tarifs fin _____________ */
+
+
+
+/* ___________ PAGE TUTORIELS _______________ */
 
 .prendreDeposer {
   display: flex;
@@ -359,9 +452,9 @@ a:link {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1200px) {
-  /* HEADER PC*/
+/* _______________ HEADER PC _____________*/
 
+@media screen and (min-width: 1200px) {
   .logo {
     display: flex;
     flex-direction: row;
@@ -395,11 +488,19 @@ a:link {
   }
 
   .white-button-pc {
+    display: block;
+  }
+
+  .menu .h1 {
     display: flex;
     justify-content: space-between;
     color: #fff;
     font-family: var(--text-font);
-    font-size: 15px;
+    font-size: 10px;
+  }
+
+  .white-button-pc h1:hover {
+    transform: translateY(-10%);
   }
 
   .english-flag {
@@ -407,37 +508,133 @@ a:link {
     height: 50%;
   }
 
-  /* SEARCH BAR PC*/
+  /* __________________ SEARCH BAR PC _____________________*/
 
   .search-container {
+    width: 90%;
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     transform: translateY(0%);
   }
 
-  .search-bar #searchbar2 {
-    display: block;
-    width: 300px;
-    height: 1.8rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    border-radius: 20px;
-    border: none;
-    background-color: #6db28fd8;
-    font-family: var(--text-font);
-    font-size: 0.8rem;
+  .switch-count-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-bar {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .search-bar .arrival {
+    display: flex;
+    width: 40%
+  }
+
+  .search-bar .departure {
+    display: flex;
+    width: 40%
+  }
+
+  .search-bar .departure div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-bar .arrival div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-bar .departure .autocomplete-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    left: 38%;
+    width: 30%;
+    top: 100%;
+  }
+
+  .search-bar .arrival .autocomplete-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    left: 65%;
+    width: 30%;
+    top: 100%;
   }
 
   .scrolling-search {
     display: none;
   }
+
+  /*_____Tarif____*/
+
+.buttonTarif{
+  display: flex;
+  justify-content: center;
 }
+
+.tarifTable{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.table{
+  width: 70%;
+}
+
+.ticket-title{
+  width: 70%;
+}
+
+.ticket-title h1{
+  color: black;
+}
+
+.card-text-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-left: 4%;
+}
+
+.overflow1{
+  width: 40%;
+  font-family: var(--text-font);
+}
+
+.overflow2{
+  width: 40%;
+  height: 595px;
+  font-family: var(--text-font);
+}
+
+.overflow2 img{
+  height: 315px;
+}
+
+}
+
 /* _____ Affichage carte leaflet _____ */
+
 .leaflet-container {
   width: 100vw;
   height: 88vh;
   z-index: 1;
 }
+
+
+
+
