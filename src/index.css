@@ -151,6 +151,7 @@ a {
 }
 
 .switch-count-container {
+
   display: flex;
   align-items:center;
   justify-content: space-between;
@@ -160,6 +161,7 @@ a {
 
 .switch-container {
   display: flex;
+
   align-items: flex-end;
   width: 60%;
   justify-content: space-evenly;
@@ -418,6 +420,7 @@ a {
   text-align: center;
 }
 
+
 .buttonTarif{
   display: flex;
   justify-content: center;
@@ -427,6 +430,7 @@ a {
 hr{
   width: 50%;
 }
+
 
 /* ____________ Tarifs fin _____________ */
 
@@ -597,6 +601,7 @@ a:link {
   width: 70%;
 }
 
+
 .ticket-title h1{
   color: black;
 }
@@ -626,6 +631,7 @@ a:link {
 }
 
 }
+
 
 /* _____ Affichage carte leaflet _____ */
 
