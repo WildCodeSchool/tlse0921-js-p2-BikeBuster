@@ -147,6 +147,7 @@ a {
 }
 
 .switch-count-container {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,6 +157,7 @@ a {
 
 .switch-container {
   display: flex;
+
   align-items: flex-end;
   width: 60%;
   justify-content: space-evenly;
@@ -301,8 +303,9 @@ a {
 }
 
 .table-style thead tr th {
-  background-color: skyblue;
+  background-color: var(--green-color);
   border: 1px solid #ddd;
+  font-family: var(--text-font);
 }
 
 .table-style td {
@@ -314,17 +317,20 @@ a {
 }
 
 .table-style tbody tr td {
-  border: 1px solid #ddd;
+  border: 1px solid whitesmoke;
+  font-family: var(--text-font);
 }
 
 .body tr:nth-child(even) {
-  background-color: #f3f3f3;
+  background-color: var(--green-color);
+  opacity: 0.8;
 }
 
 .tarif {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 5%;
 }
 
 .abonnement-cards {
@@ -334,6 +340,7 @@ a {
 
 .ticket-title h1 {
   align-items: center;
+  font-family: var(--title-font);
 }
 
 .table {
@@ -345,10 +352,12 @@ a {
   display: flex;
   flex-direction: column;
   font-size: 1rem;
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   text-align: center;
-  background-color: whitesmoke;
+  background-color: var(--green-color);
   justify-content: center;
+  font-family: var(--title-font);
+  margin-bottom: 1%;
 }
 
 .card-text-center {
@@ -381,6 +390,7 @@ a {
 .overflow1 {
   width: 95%;
   background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+  font-family: var(--text-font);
 }
 
 .overflow2 img {
@@ -391,11 +401,24 @@ a {
 .overflow2 {
   width: 95%;
   background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
+  font-family: var(--text-font);
 }
 
 .cards h2 {
   text-align: center;
 }
+
+
+.buttonTarif{
+  display: flex;
+  justify-content: center;
+  font-family: var(--text-font);
+}
+
+hr{
+  width: 50%;
+}
+
 
 /* ____________ Tarifs fin _____________ */
 
@@ -564,6 +587,7 @@ a:link {
     display: none;
   }
 
+
   /* _____ A propos PC _____ */
 
   .Apropos-card {
@@ -576,7 +600,62 @@ a:link {
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  /*_____Tarif____*/
+
+.buttonTarif{
+  display: flex;
+  justify-content: center;
 }
+
+.tarifTable{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.table{
+  width: 70%;
+}
+
+.ticket-title{
+  width: 70%;
+}
+
+
+.ticket-title h1{
+  color: black;
+}
+
+.card-text-center{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  margin-left: 4%;
+
+}
+
+.overflow1{
+  width: 40%;
+  font-family: var(--text-font);
+}
+
+.overflow2{
+  width: 40%;
+  height: 595px;
+  font-family: var(--text-font);
+}
+
+.overflow2 img{
+  height: 315px;
+}
+
+}
+
 
 /* _____ Affichage carte leaflet _____ */
 
@@ -585,3 +664,7 @@ a:link {
   height: 88vh;
   z-index: 1;
 }
+
+
+
+
