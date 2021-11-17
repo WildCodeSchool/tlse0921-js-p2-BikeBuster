@@ -33,7 +33,7 @@ function Tutoriels() {
         </div>
         {!click && (
           <div className="prendre">
-            <div className="vidéo tuto">
+            <div className="vidéotutoprendre">
               <iframe
                 src="https://www.youtube.com/embed/poc2ycUmtIY"
                 frameBorder="0"
@@ -42,7 +42,7 @@ function Tutoriels() {
                 title="video"
               />
             </div>
-            <div className="etapes">
+            <div className="etapesprendre">
               <h3>Les étapes</h3>
               <h4>Etape 1 :</h4>
               <p className="explications">
@@ -58,14 +58,14 @@ function Tutoriels() {
                 Appuyer sur le bouton pour retirer le vélo.
               </p>
               <h4>Etape 4 :</h4>
-              <p className="explications">Règler le vélo à ta hauteur.</p>
+              <p className="explications">Règler le vélo à la bonne hauteur.</p>
             </div>
           </div>
         )}
         ;
         {click && (
-          <div className="déposer">
-            <div className="vidéo tuto">
+          <div className="deposer">
+            <div className="vidéotutodeposer">
               <iframe
                 src="https://www.youtube.com/embed/_jjqjgpcA70"
                 frameBorder="0"
@@ -74,7 +74,7 @@ function Tutoriels() {
                 title="video"
               />
             </div>
-            <div className="etapes">
+            <div className="etapesdeposer">
               <h3>Les étapes</h3>
               <h4>Etape 1 :</h4>
               <p className="explications">
