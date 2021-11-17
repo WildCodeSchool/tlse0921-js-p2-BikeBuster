@@ -5,9 +5,10 @@ import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import ResultListStand from './ResultListStand';
 import ResultListBike from './ResultListBike';
 import LocationMarker from './LocationMarker';
+import ItineraryMarker from './ItineraryMarker';
 
 function Map(props) {
-  const { count, check } = props;
+  const { count, check, click } = props;
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -33,6 +34,7 @@ function Map(props) {
         {!check && <ResultListBike results={results} count={count} />};
         {check && <ResultListStand results={results} count={count} />};
         <LocationMarker />
+        <ItineraryMarker click={click} />
       </MapContainer>
     </div>
   );

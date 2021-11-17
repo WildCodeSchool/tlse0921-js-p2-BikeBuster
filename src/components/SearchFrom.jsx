@@ -1,24 +1,31 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+
+import SearchIcon from '@mui/icons-material/Search';
+
 import PlacesAutocomplete, {
   geocodeByAddress,
   //  geocodeByPlaceId,
   getLatLng,
 } from 'react-places-autocomplete';
 
-function SearchFrom() {
+import LocalisationContext from '../context/LocalisationContext';
+
+function SearchBar({ handleClick }) {
+  const { coordinates, setCoordinates } = useContext(LocalisationContext);
+
   const [address, setAddress] = useState('');
-  const [coordinates, setCoordinates] = useState({
-    lat: null,
-    lng: null,
-  });
 
   const handleSelect = async (value) => {
-    const result = await geocodeByAddress(value);
-    const ll = await getLatLng(result[0]);
-    setAddress(value);
-    setCoordinates(ll);
-    console.log(coordinates);
+    try {
+      const result = await geocodeByAddress(value);
+      const ll = await getLatLng(result[0]);
+      setAddress(value);
+      setCoordinates(ll);
+      console.log(coordinates);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -34,7 +41,7 @@ function SearchFrom() {
           <div key={suggestions.description}>
             <input
               {...getInputProps({
-                placeholder: 'Départ',
+                placeholder: 'Stations à proximité de ...',
                 className: 'location-search-input',
               })}
             />
@@ -68,8 +75,18 @@ function SearchFrom() {
           </div>
         )}
       </PlacesAutocomplete>
+      <button
+        type="button"
+        className="search-icon"
+        onClick={() => {
+          handleSelect(address);
+          handleClick();
+        }}
+      >
+        <SearchIcon sx={{ fontSize: 25 }} />
+      </button>
     </>
   );
 }
 
-export default SearchFrom;
+export default SearchBar;

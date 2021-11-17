@@ -1,4 +1,3 @@
-
 import { Marker, Popup } from 'react-leaflet';
 
 import L from 'leaflet';
@@ -25,10 +24,8 @@ const ResultsListBike = (props) => {
     <div>
       {results
         .filter(
-
-          (station) => (station.available_bikes - count) <= 5
-          && station.available_bikes >= count,
-
+          (station) => station.available_bikes - count <= 5
+            && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker
@@ -41,9 +38,11 @@ const ResultsListBike = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
-
-              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`} target="_blank" rel="noreferrer">
-
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Itinéraire
               </a>
             </Popup>
@@ -52,11 +51,9 @@ const ResultsListBike = (props) => {
 
       {results
         .filter(
-
-          (station) => (station.available_bikes - count) > 5
-              && (station.available_bikes - count) <= 10
-              && station.available_bikes >= count,
-
+          (station) => station.available_bikes - count > 5
+            && station.available_bikes - count <= 10
+            && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker
@@ -69,9 +66,11 @@ const ResultsListBike = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
-
-              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`} target="_blank" rel="noreferrer">
-
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Itinéraire
               </a>
             </Popup>
@@ -80,10 +79,8 @@ const ResultsListBike = (props) => {
 
       {results
         .filter(
-
-          (station) => (station.available_bikes - count > 10)
-          && station.available_bikes >= count,
-
+          (station) => station.available_bikes - count > 10
+            && station.available_bikes >= count,
         )
         .map((e) => (
           <Marker
@@ -96,9 +93,11 @@ const ResultsListBike = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
-
-              <a href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`} target="_blank" rel="noreferrer">
-
+              <a
+                href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=walking`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Itinéraire
               </a>
             </Popup>
