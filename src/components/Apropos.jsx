@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const Apropos = () => (
   <div>
@@ -30,6 +32,45 @@ const Apropos = () => (
           <ArrowDownwardIcon />
         </div>
       </div>
+    </div>
+    <div className="carousell">
+      <Carousel autoPlay>
+        <div className="carousel">
+          <img
+            alt=""
+            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/c5/13/bb/provided-by-office-de.jpg?w=700&h=500&s=1"
+          />
+          <p className="legend">Malik</p>
+        </div>
+        <div className="carousel">
+          <img
+            alt=""
+            src="https://www.gl-events.com/sites/default/files/styles/hero_background_image/public/2018-12/Photo%20Toulouse%20-%20credit%20Toulouse%20Ev%C3%A9nements_1.jpg?itok=Q9sUb-WX"
+          />
+          <p className="legend">Antonia</p>
+        </div>
+        <div className="carousel">
+          <img
+            alt=""
+            src="https://static.actu.fr/uploads/2020/12/adobestock-287216683-1.jpeg"
+          />
+          <p className="legend">Laurie</p>
+        </div>
+        <div className="carousel">
+          <img
+            alt=""
+            src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fgeo.2F2021.2F02.2F20.2F68df8f7e-43b2-40aa-96df-3516a24fd019.2Ejpeg/1150x647/background-color/ffffff/quality/70/quels-sont-les-meilleurs-quartiers-de-toulouse.jpg"
+          />
+          <p className="legend">Leo</p>
+        </div>
+        <div className="carousel">
+          <img
+            alt=""
+            src="https://www.toulouse-tourisme.com/sites/www.toulouse-tourisme.com/files/styles/incontournable_hp/public/thumbnails/image/incontournables_toulouse.jpg?itok=iI-TWLoM"
+          />
+          <p className="legend">Cristi</p>
+        </div>
+      </Carousel>
     </div>
   </div>
 );
