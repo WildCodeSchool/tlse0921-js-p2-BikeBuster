@@ -1,3 +1,4 @@
+import { useState } from 'react';
 /* eslint-disable react/prop-types */
 import { Marker, Popup } from 'react-leaflet';
 
@@ -21,11 +22,18 @@ const ResultListStand = (props) => {
     iconSize: [50, 50],
   });
 
+  const [favorite, setFavorite] = useState(false);
+
+  const isFavorite = () => {
+    setFavorite(!favorite);
+  };
+
   return (
     <div>
       {results
         .filter(
-          (station) => station.available_bike_stands <= 5 && station.available_bike_stands >= count,
+          (station) => station.available_bike_stands <= 5
+            && station.available_bike_stands >= count,
         )
         .map((e) => (
           <Marker
@@ -38,6 +46,11 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`}
+              {!favorite && <div>{e.name}</div>}
+              <button type="button" id={e.number} onClick={isFavorite}>
+                {' '}
+                {e.number}{' '}
+              </button>
             </Popup>
           </Marker>
         ))}
@@ -45,8 +58,8 @@ const ResultListStand = (props) => {
       {results
         .filter(
           (station) => station.available_bike_stands > 5
-              && station.available_bike_stands <= 10
-              && station.available_bike_stands >= count,
+            && station.available_bike_stands <= 10
+            && station.available_bike_stands >= count,
         )
         .map((e) => (
           <Marker
@@ -59,13 +72,19 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`}
+              {!favorite && <div>{e.name}</div>}
+              <button type="button" id={e.number} onClick={isFavorite}>
+                {' '}
+                {e.number}{' '}
+              </button>
             </Popup>
           </Marker>
         ))}
 
       {results
         .filter(
-          (station) => station.available_bike_stands > 10 && station.available_bike_stands >= count,
+          (station) => station.available_bike_stands > 10
+            && station.available_bike_stands >= count,
         )
         .map((e) => (
           <Marker
@@ -78,6 +97,11 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`}
+              {!favorite && <div>{e.name}</div>}
+              <button type="button" id={e.number} onClick={isFavorite}>
+                {' '}
+                {e.number}{' '}
+              </button>
             </Popup>
           </Marker>
         ))}
