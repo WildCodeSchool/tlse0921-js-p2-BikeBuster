@@ -1,6 +1,8 @@
 import { Marker, Popup } from 'react-leaflet';
-
 import L from 'leaflet';
+
+import { useContext } from 'react';
+import LocalisationContext from '../context/LocalisationContext';
 
 const ResultListStand = (props) => {
   const { results, count } = props;
@@ -20,6 +22,8 @@ const ResultListStand = (props) => {
     iconSize: [50, 50],
   });
 
+  const { itinerary, placeId, address } = useContext(LocalisationContext);
+
   return (
     <div>
       {results
@@ -38,13 +42,28 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
-              <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Itinéraire
-              </a>
+              {itinerary ? (
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&origin=${address.replace(
+                    ',',
+                    '%2C'.replace(' ', '+'),
+                  )}&origin_place_id=${placeId}&destination=${
+                    e.position.lat
+                  }%2C${e.position.lng}&travelmode=bicycling`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Itinéraire
+                </a>
+              ) : (
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Itinéraire
+                </a>
+              )}
             </Popup>
           </Marker>
         ))}
@@ -66,13 +85,28 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
-              <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Itinéraire
-              </a>
+              {itinerary ? (
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&origin=${address.replace(
+                    ',',
+                    '%2C'.replace(' ', '+'),
+                  )}&origin_place_id=${placeId}&destination=${
+                    e.position.lat
+                  }%2C${e.position.lng}&travelmode=bicycling`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Itinéraire
+                </a>
+              ) : (
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Itinéraire
+                </a>
+              )}
             </Popup>
           </Marker>
         ))}
@@ -93,13 +127,28 @@ const ResultListStand = (props) => {
               <br />
               {`Vélos disponibles: ${e.available_bikes}`} <br />
               {`Places disponibles: ${e.available_bike_stands}`} <br />
-              <a
-                href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Itinéraire
-              </a>
+              {itinerary ? (
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&origin=${address.replace(
+                    ',',
+                    '%2C'.replace(' ', '+'),
+                  )}&origin_place_id=${placeId}&destination=${
+                    e.position.lat
+                  }%2C${e.position.lng}&travelmode=bicycling`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Itinéraire
+                </a>
+              ) : (
+                <a
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${e.position.lat}%2C${e.position.lng}&travelmode=bicycling`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Itinéraire
+                </a>
+              )}
             </Popup>
           </Marker>
         ))}

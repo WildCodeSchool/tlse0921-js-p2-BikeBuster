@@ -33,7 +33,7 @@ function Tutoriels() {
         </div>
         {!click && (
           <div className="prendre">
-            <div className="vidéo tuto">
+            <div className="vidéotutoprendre">
               <iframe
                 src="https://www.youtube.com/embed/poc2ycUmtIY"
                 frameBorder="0"
@@ -43,7 +43,6 @@ function Tutoriels() {
               />
             </div>
             <div className="etapes">
-              <h3>Les étapes</h3>
               <h4>Etape 1 :</h4>
               <p className="explications">
                 Trouver une station avec un vélo disponible et en bon état.
@@ -58,14 +57,13 @@ function Tutoriels() {
                 Appuyer sur le bouton pour retirer le vélo.
               </p>
               <h4>Etape 4 :</h4>
-              <p className="explications">Règler le vélo à ta hauteur.</p>
+              <p className="explications">Règler le vélo à la bonne hauteur.</p>
             </div>
           </div>
         )}
-        ;
         {click && (
-          <div className="déposer">
-            <div className="vidéo tuto">
+          <div className="deposer">
+            <div className="vidéotutodeposer">
               <iframe
                 src="https://www.youtube.com/embed/_jjqjgpcA70"
                 frameBorder="0"
@@ -75,7 +73,6 @@ function Tutoriels() {
               />
             </div>
             <div className="etapes">
-              <h3>Les étapes</h3>
               <h4>Etape 1 :</h4>
               <p className="explications">
                 Devant un empacement libre, enclenchez votre vélo.
@@ -87,8 +84,8 @@ function Tutoriels() {
               </p>
               <h4>Attention</h4>
               <p className="explications">
-                Si votre vélo est mal enclenché, le bip sera permanent
-                <p>Votre responsabilité sera engagée. Essayez à nouveau.</p>
+                Si votre vélo est mal enclenché, le bip sera permanent Votre
+                responsabilité sera engagée. Essayez à nouveau.
               </p>
             </div>
           </div>

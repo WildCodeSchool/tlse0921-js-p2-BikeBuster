@@ -1,24 +1,39 @@
 /* eslint-disable no-console */
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+
+import SearchIcon from '@mui/icons-material/Search';
+import ClearIcon from '@mui/icons-material/Clear';
+
 import PlacesAutocomplete, {
   geocodeByAddress,
-  //  geocodeByPlaceId,
   getLatLng,
+  //  geocodeByPlaceId,
 } from 'react-places-autocomplete';
 
-function SearchFrom() {
-  const [address, setAddress] = useState('');
-  const [coordinates, setCoordinates] = useState({
-    lat: null,
-    lng: null,
-  });
+import LocalisationContext from '../context/LocalisationContext';
+
+function SearchBar() {
+  const {
+    setCoordinates,
+    setItinerary,
+    placeId,
+    setPlaceId,
+    address,
+    setAddress,
+  } = useContext(LocalisationContext);
 
   const handleSelect = async (value) => {
-    const result = await geocodeByAddress(value);
-    const ll = await getLatLng(result[0]);
-    setAddress(value);
-    setCoordinates(ll);
-    console.log(coordinates);
+    try {
+      const result = await geocodeByAddress(value);
+      const ll = await getLatLng(result[0]);
+      setAddress(value);
+      setCoordinates(ll);
+      setPlaceId(result[0].place_id);
+      setItinerary(true);
+      console.log(placeId);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -31,13 +46,22 @@ function SearchFrom() {
         {({
           getInputProps, suggestions, getSuggestionItemProps, loading,
         }) => (
-          <div key={suggestions.description}>
-            <input
-              {...getInputProps({
-                placeholder: 'Départ',
-                className: 'location-search-input',
-              })}
-            />
+          <div key={suggestions.description} className="search-line">
+            <div className="fake-searchbar">
+              <input
+                {...getInputProps({
+                  placeholder: 'Stations à proximité de ...',
+                  className: 'location-search-input',
+                })}
+              />
+              <button
+                className="clear-button"
+                type="button"
+                onClick={() => setItinerary(false)}
+              >
+                <ClearIcon color="success" />
+              </button>
+            </div>
             <div className="autocomplete-dropdown-container">
               {loading && <div>Loading...</div>}
               {suggestions.map((suggestion) => {
@@ -65,6 +89,15 @@ function SearchFrom() {
                 );
               })}
             </div>
+            <button
+              type="button"
+              className="search-button"
+              onClick={() => {
+                handleSelect(address);
+              }}
+            >
+              <SearchIcon sx={{ fontSize: 25, color: '#6db290' }} />
+            </button>
           </div>
         )}
       </PlacesAutocomplete>
@@ -72,4 +105,4 @@ function SearchFrom() {
   );
 }
 
-export default SearchFrom;
+export default SearchBar;

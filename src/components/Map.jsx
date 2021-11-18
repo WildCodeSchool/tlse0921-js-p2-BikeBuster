@@ -5,9 +5,10 @@ import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import ResultListStand from './ResultListStand';
 import ResultListBike from './ResultListBike';
 import LocationMarker from './LocationMarker';
+import ItineraryMarker from './ItineraryMarker';
 
 function Map(props) {
-  const { count, check } = props;
+  const { count, check, click } = props;
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -30,9 +31,16 @@ function Map(props) {
           url="https://api.mapbox.com/styles/v1/leoplanelles/ckvm9t3k7k7on15mpslnijx7n/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGVvcGxhbmVsbGVzIiwiYSI6ImNrdm05cnNlYjB4N3Aycm91NW9hNmJvenQifQ.QoNf0EMBb0BFbohQf-VZGA"
         />
         <ZoomControl position="bottomright" />
-        {!check && <ResultListBike results={results} count={count} />};
-        {check && <ResultListStand results={results} count={count} />};
+        {!check && (
+          <ResultListBike results={results} count={count} click={click} />
+        )}
+        ;
+        {check && (
+          <ResultListStand results={results} count={count} click={click} />
+        )}
+        ;
         <LocationMarker />
+        <ItineraryMarker click={click} />
       </MapContainer>
     </div>
   );

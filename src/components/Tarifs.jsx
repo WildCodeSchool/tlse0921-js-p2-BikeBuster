@@ -116,7 +116,7 @@ const Tarifs = () => (
               rel="noreferrer"
               target="_blank"
             >
-              <button type="button">Voir le site</button>{' '}
+              <button type="button">Voir le site</button>
             </a>
           </div>
           <br />
