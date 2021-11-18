@@ -48,10 +48,7 @@ const Apropos = () => (
           <p className="legend">Laurie</p>
         </div>
         <div className="carousel">
-          <img
-            alt=""
-            src="https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fgeo.2F2021.2F02.2F20.2F68df8f7e-43b2-40aa-96df-3516a24fd019.2Ejpeg/1150x647/background-color/ffffff/quality/70/quels-sont-les-meilleurs-quartiers-de-toulouse.jpg"
-          />
+          <img alt="" src="/assets/leo.jpg" />
           <p className="legend">Leo</p>
         </div>
         <div className="carousel">
