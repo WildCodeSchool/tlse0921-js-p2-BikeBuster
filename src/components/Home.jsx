@@ -1,9 +1,9 @@
 import { React, useState, useCallback } from 'react';
 
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import Switch from '@mui/material/Switch';
 import { alpha, styled } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
+import MenuIcon from '@mui/icons-material/Menu';
 
 import LocalisationContext from '../context/LocalisationContext';
 
@@ -70,7 +70,9 @@ function Home() {
         <input id="button-search-container" type="checkbox" />
         <div className="scrolling-search">
           <label htmlFor="button-search-container">
-            <ArrowDownwardIcon />
+            <div className="ttt">
+              <MenuIcon />
+            </div>
           </label>
         </div>
         <div className="search-container">
