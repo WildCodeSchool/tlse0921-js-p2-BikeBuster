@@ -103,10 +103,10 @@ const Tarifs = () => (
           <img src={img1} alt="image2" />
           <h2 className="card-title1">Abonnement mensuel</h2>
           <p>
-            Souple, l abonnement mensuel vous permet d utiliser le service selon
-            vos besoins tout en profitant des avantages de la carte d abonné.
+            Souple, l&apos;abonnement mensuel vous permet d&apos;utiliser le service selon
+            vos besoins tout en profitant des avantages de la carte d&apos;abonné.
             Celle-ci vous permet de prendre un vélo rapidement et de vous
-            déplacer d’une station à l’autre en quelques minutes.
+            déplacer d’une station à l&apos;autre en quelques minutes.
           </p>
           <br />
           <br />
@@ -130,10 +130,10 @@ const Tarifs = () => (
           <img src={img2} alt="image2" />
           <h2 className="card-title2">Abonnement annuel</h2>
           <p>
-            Simple d utilisation, l abonnement annuel vous permet de louer un
+            Simple d&apos;utilisation, l&apos;abonnement annuel vous permet de louer un
             vélo rapidement. Il suffit de passer sa carte directement sur le
-            lecteur de la borne. Vous pouvez ainsi vous déplacer d’une station à
-            l’autre en quelques minutes.
+            lecteur de la borne. Vous pouvez ainsi vous déplacer d&apos;une station à
+            l&apos;autre en quelques minutes.
             <br />
             <br />
           </p>

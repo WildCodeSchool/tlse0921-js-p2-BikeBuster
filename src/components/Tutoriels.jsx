@@ -43,20 +43,20 @@ function Tutoriels() {
               />
             </div>
             <div className="etapes">
-              <h4>Etape 1 :</h4>
+              <h4>Étape 1 :</h4>
               <p className="explications">
                 Trouver une station avec un vélo disponible et en bon état.
               </p>
-              <h4>Etape 2 :</h4>
+              <h4>Étape 2 :</h4>
               <p className="explications">
                 Suivre les indications de la borne pour selectionner le vélo et
                 effectuer le paiement.
               </p>
-              <h4>Etape 3 :</h4>
+              <h4>Étape 3 :</h4>
               <p className="explications">
                 Appuyer sur le bouton pour retirer le vélo.
               </p>
-              <h4>Etape 4 :</h4>
+              <h4>Étape 4 :</h4>
               <p className="explications">Règler le vélo à la bonne hauteur.</p>
             </div>
           </div>
@@ -73,19 +73,19 @@ function Tutoriels() {
               />
             </div>
             <div className="etapes">
-              <h4>Etape 1 :</h4>
+              <h4>Étape 1 :</h4>
               <p className="explications">
-                Devant un empacement libre, enclenchez votre vélo.
+                Devant un emplacement libre, enclencher votre vélo.
               </p>
-              <h4>Etape 2 :</h4>
+              <h4>Étape 2 :</h4>
               <p className="explications">
-                Attendez un instant, un voyant vert suivi du double bip signifie
-                que votre vélo est bien vérrouillé.
+                Attendre un instant, un voyant vert suivi du double bip signifie
+                que votre vélo est bien verrouillé.
               </p>
               <h4>Attention</h4>
               <p className="explications">
                 Si votre vélo est mal enclenché, le bip sera permanent
-                Votre responsabilité sera engagée. Essayez à nouveau.
+                Votre responsabilité sera engagée. Essayer à nouveau.
               </p>
             </div>
           </div>
