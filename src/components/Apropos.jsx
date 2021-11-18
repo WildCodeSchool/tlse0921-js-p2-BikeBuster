@@ -11,9 +11,9 @@ const Apropos = () => (
         <h1>Qu&apos;est-ce que Bike Buster ?</h1>
         <p>
           Bike Buster, c&apos;est la toute première application permettant de
-          trouver la station de Vélib la plus proche en moins de 10 secondes, évitant
-          ainsi les trajets inutiles entre les différentes stations pour essayer
-          de trouver un Vélib ou en déposer un. De par son accessibilté
+          trouver la station de Vélib la plus proche en moins de 10 secondes,
+          évitant ainsi les trajets inutiles entre les différentes stations pour
+          essayer de trouver un Vélib ou en déposer un. De par son accessibilté
           incroyable et sa capacité à sauver des vies, Bike Buster a
           indéniablement réussi à se hisser dans le Top 10 HIT Machine de
           l&apos;été 2021 des applications mobiles et pourrait bientôt atteindre
@@ -36,24 +36,15 @@ const Apropos = () => (
       <h1 className="our-team"> Notre équipe </h1>
       <Carousel autoPlay>
         <div className="carousel">
-          <img
-            alt=""
-            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/c5/13/bb/provided-by-office-de.jpg?w=700&h=500&s=1"
-          />
+          <img alt="" src="/assets/malik.jpg" />
           <p className="legend">Malik</p>
         </div>
         <div className="carousel">
-          <img
-            alt=""
-            src="https://www.gl-events.com/sites/default/files/styles/hero_background_image/public/2018-12/Photo%20Toulouse%20-%20credit%20Toulouse%20Ev%C3%A9nements_1.jpg?itok=Q9sUb-WX"
-          />
+          <img alt="" src="/assets/antonia.jpg" />
           <p className="legend">Antonia</p>
         </div>
         <div className="carousel">
-          <img
-            alt=""
-            src="https://static.actu.fr/uploads/2020/12/adobestock-287216683-1.jpeg"
-          />
+          <img alt="" src="/assets/laurie.jpg" />
           <p className="legend">Laurie</p>
         </div>
         <div className="carousel">
@@ -64,10 +55,7 @@ const Apropos = () => (
           <p className="legend">Leo</p>
         </div>
         <div className="carousel">
-          <img
-            alt=""
-            src="https://www.toulouse-tourisme.com/sites/www.toulouse-tourisme.com/files/styles/incontournable_hp/public/thumbnails/image/incontournables_toulouse.jpg?itok=iI-TWLoM"
-          />
+          <img alt="" src="/assets/cristi.jpg" />
           <p className="legend">Cristi</p>
         </div>
       </Carousel>

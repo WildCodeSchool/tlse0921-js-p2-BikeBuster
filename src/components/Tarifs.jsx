@@ -1,8 +1,6 @@
 import React from 'react';
 import { FaMoneyBillAlt } from 'react-icons/fa';
 import Button from '@mui/material/Button';
-import velotoulouse from './assets/velotoulouse.jpeg';
-import image from './assets/image.jpeg';
 
 const Tarifs = () => (
   <div className="tarif">
@@ -91,7 +89,7 @@ const Tarifs = () => (
       <h2>Abonnement</h2>
       <div className="card-text-center">
         <div className="overflow1">
-          <img src={image} alt="image2" />
+          <img src="/assets/velotoulouse.jpeg" alt="image2" />
           <h2 className="card-title1">Abonnement mensuel</h2>
           <p>
             Souple, l&apos;abonnement mensuel vous permet d&apos;utiliser le
@@ -119,7 +117,7 @@ const Tarifs = () => (
         <br />
         <br />
         <div className="overflow2">
-          <img src={velotoulouse} alt="image2" />
+          <img src="/assets/image.jpeg" alt="image2" />
           <h2 className="card-title2">Abonnement annuel</h2>
           <p>
             Simple d&apos;utilisation, l&apos;abonnement annuel vous permet de
