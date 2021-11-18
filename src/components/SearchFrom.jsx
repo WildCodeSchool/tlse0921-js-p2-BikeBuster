@@ -7,7 +7,6 @@ import ClearIcon from '@mui/icons-material/Clear';
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
-  //  geocodeByPlaceId,
 } from 'react-places-autocomplete';
 
 import LocalisationContext from '../context/LocalisationContext';
