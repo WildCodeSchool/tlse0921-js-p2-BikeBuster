@@ -95,8 +95,8 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 50%;
   font-family: var(--title-font);
+  width: 70%;
 }
 
 .white-button {
@@ -303,6 +303,10 @@ a {
   box-shadow: 1px 1px 3px black;
 }
 
+.scrolling-search label {
+  width: 100%;
+}
+
 #button-search-container {
   display: none;
 }
@@ -316,6 +320,12 @@ a {
   width: 20%;
   background-color: #6db28f;
   color: white;
+}
+
+.ttt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* _________________ Tarifs debut ______________________ */
@@ -372,6 +382,7 @@ a {
 .table {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .ticket-title {
