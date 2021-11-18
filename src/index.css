@@ -218,6 +218,7 @@ a {
 .search-bar .clear-button {
   background-color: var(--green-color);
   border: none;
+  border-radius: 100%;
 }
 
 .location-search-input:focus-visible {
@@ -517,10 +518,24 @@ h4 {
   text-align: center;
 }
 
-.carousell {
-  margin-top: 10%;
-  width: 100%;
+.our-team {
+  color: var(--green-color);
+  font-size: 3rem;
+  font-family: var(--logo-font);
 }
+
+.carousell {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-root {
+  width: 90%;
+}
+
 /* _______________ HEADER PC _____________*/
 
 @media screen and (min-width: 1200px) {
@@ -659,6 +674,7 @@ h4 {
   }
 
   .Apropos-container {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -666,9 +682,22 @@ h4 {
 
   .carousell {
     height: 70%;
-    width: 800px;
-    margin-left: 23%;
-    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-root {
+    width: 50%;
+  }
+
+  .carousel .thumbs-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  #Apropos-title {
+    display: none;
   }
 
   /*_____Tarif____*/

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { useContext } from 'react';
 
 import SearchIcon from '@mui/icons-material/Search';
@@ -13,12 +12,7 @@ import LocalisationContext from '../context/LocalisationContext';
 
 function SearchBar() {
   const {
-    setCoordinates,
-    setItinerary,
-    placeId,
-    setPlaceId,
-    address,
-    setAddress,
+    setCoordinates, setItinerary, setPlaceId, address, setAddress,
   } = useContext(LocalisationContext);
 
   const handleSelect = async (value) => {
@@ -29,7 +23,6 @@ function SearchBar() {
       setCoordinates(ll);
       setPlaceId(result[0].place_id);
       setItinerary(true);
-      console.log(placeId);
     } catch (err) {
       console.log(err);
     }
