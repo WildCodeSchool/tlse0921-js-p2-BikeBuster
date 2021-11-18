@@ -448,32 +448,32 @@ hr {
 
 /* ___________ PAGE TUTORIELS _______________ */
 
-.titreprendre{
+.titreprendre {
   text-align: end;
 }
-img{
+img {
   height: 20%;
   width: 20%;
   padding-top: 8px;
 }
-.imagetuto{
+.imagetuto {
   display: flex;
   justify-content: center;
 }
-.prendreDeposer{
+.prendreDeposer {
   display: flex;
   align-items: center;
 }
-iframe{
+iframe {
   height: 300px;
   width: 100%;
 }
-.etapes{
+.etapes {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-h4{
+h4 {
   display: flex;
   justify-content: center;
 }
@@ -509,7 +509,8 @@ h4{
 
 .carousell {
   margin-top: 10%;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
 }
 /* _______________ HEADER PC _____________*/
 
@@ -612,26 +613,26 @@ h4{
   }
 
   /* _____ Tuto _____ */
-  iframe{
+  iframe {
     height: 300px;
     width: 450px;
   }
-  .prendre{
+  .prendre {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 8%;
     margin-top: 5%;
   }
-    
-  .deposer{
+
+  .deposer {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     margin-right: 8%;
     margin-top: 5%;
   }
-  img{
+  img {
     height: 10%;
     width: 10%;
     margin-top: 8px;
