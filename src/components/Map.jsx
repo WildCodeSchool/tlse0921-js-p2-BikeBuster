@@ -2,8 +2,14 @@ import { useState, useEffect } from 'react';
 
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 
-import ResultListStand from './ResultListStand';
-import ResultListBike from './ResultListBike';
+import GreenMarkersBikeStands from './GreenMarkers-bikeStands';
+import YellowMarkersBikeStands from './YellowMarkers-bikeStands';
+import RedMarkersBikeStands from './RedMarkers-bikeStands';
+
+import GreenMarkersBikes from './GreenMarkers-bikes';
+import YellowMarkersBikes from './YellowMarkers-bikes';
+import RedMarkersBikes from './RedMarkers-bikes';
+
 import LocationMarker from './LocationMarker';
 import ItineraryMarker from './ItineraryMarker';
 
@@ -32,11 +38,31 @@ function Map(props) {
         />
         <ZoomControl position="bottomright" />
         {!check && (
-          <ResultListBike results={results} count={count} click={click} />
+          <>
+            <GreenMarkersBikes results={results} count={count} click={click} />
+            <YellowMarkersBikes results={results} count={count} click={click} />
+            <RedMarkersBikes results={results} count={count} click={click} />
+          </>
         )}
         ;
         {check && (
-          <ResultListStand results={results} count={count} click={click} />
+          <>
+            <GreenMarkersBikeStands
+              results={results}
+              count={count}
+              click={click}
+            />
+            <YellowMarkersBikeStands
+              results={results}
+              count={count}
+              click={click}
+            />
+            <RedMarkersBikeStands
+              results={results}
+              count={count}
+              click={click}
+            />
+          </>
         )}
         ;
         <LocationMarker />

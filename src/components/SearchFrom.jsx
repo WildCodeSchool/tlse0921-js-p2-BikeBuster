@@ -7,19 +7,13 @@ import ClearIcon from '@mui/icons-material/Clear';
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
-  //  geocodeByPlaceId,
 } from 'react-places-autocomplete';
 
 import LocalisationContext from '../context/LocalisationContext';
 
 function SearchBar() {
   const {
-    setCoordinates,
-    setItinerary,
-    placeId,
-    setPlaceId,
-    address,
-    setAddress,
+    setCoordinates, setItinerary, setPlaceId, address, setAddress,
   } = useContext(LocalisationContext);
 
   const handleSelect = async (value) => {
@@ -30,7 +24,6 @@ function SearchBar() {
       setCoordinates(ll);
       setPlaceId(result[0].place_id);
       setItinerary(true);
-      console.log(placeId);
     } catch (err) {
       console.log(err);
     }
