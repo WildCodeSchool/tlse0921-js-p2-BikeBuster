@@ -57,7 +57,10 @@ function SearchBar() {
               <button
                 className="clear-button"
                 type="button"
-                onClick={() => setItinerary(false)}
+                onClick={() => {
+                  setItinerary(false);
+                  setAddress('');
+                }}
               >
                 <ClearIcon color="success" />
               </button>

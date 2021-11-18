@@ -588,11 +588,11 @@ h4 {
   .search-bar div {
     width: 90%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .search-bar .location-search-input {
-    width: 95%;
+    width: 90%;
   }
 
   .search-bar .autocomplete-dropdown-container {
@@ -603,7 +603,11 @@ h4 {
     top: 100%;
   }
 
-  .search-bar button:hover {
+  .search-bar .clear-button {
+    border-radius: 100%;
+  }
+
+  .search-bar .search-button:hover {
     border: solid rgb(141, 201, 159) 2px;
   }
 
