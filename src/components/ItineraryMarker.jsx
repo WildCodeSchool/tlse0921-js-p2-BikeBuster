@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 
-import { Marker, Popup, useMap } from 'react-leaflet';
+import { Marker, useMap } from 'react-leaflet';
 import L from 'leaflet';
 
 import LocalisationContext from '../context/LocalisationContext';
@@ -22,9 +22,7 @@ function ItineraryMarker() {
   }, [coordinates]);
 
   return coordinates === null ? null : (
-    <Marker icon={userMarker} position={[coordinates.lat, coordinates.lng]}>
-      <Popup>Vous êtes ici</Popup>
-    </Marker>
+    <Marker icon={userMarker} position={[coordinates.lat, coordinates.lng]} />
   );
 }
 

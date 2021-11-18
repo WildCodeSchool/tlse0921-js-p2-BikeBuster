@@ -10,10 +10,12 @@ function Navigation() {
   return (
     <div className="container-menu">
       <div className="logo">
-        <video className="video" autoPlay muted>
-          <track kind="captions" />
-          <source src="/videoBikeBuster.mp4" type="video/mp4" />
-        </video>
+        <Link to="/">
+          <video className="video" autoPlay muted>
+            <track kind="captions" />
+            <source src="/videoBikeBuster.mp4" type="video/mp4" />
+          </video>
+        </Link>
         <Link to="/">
           <div>Bike Buster</div>
         </Link>

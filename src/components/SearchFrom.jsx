@@ -1,26 +1,39 @@
-/* eslint-disable no-console */
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 
 import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
-  //  geocodeByPlaceId,
 } from 'react-places-autocomplete';
 
 import LocalisationContext from '../context/LocalisationContext';
 
 function SearchBar() {
   const {
-    setCoordinates,
-    setItinerary,
-    placeId,
-    setPlaceId,
-    address,
-    setAddress,
+    setCoordinates, setItinerary, setPlaceId, address, setAddress,
   } = useContext(LocalisationContext);
+
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  function displayError() {
+    if (error === true) {
+      toast.error(errorMessage, {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
 
   const handleSelect = async (value) => {
     try {
@@ -30,9 +43,10 @@ function SearchBar() {
       setCoordinates(ll);
       setPlaceId(result[0].place_id);
       setItinerary(true);
-      console.log(placeId);
     } catch (err) {
-      console.log(err);
+      setError(true);
+      setErrorMessage(err);
+      displayError();
     }
   };
 
