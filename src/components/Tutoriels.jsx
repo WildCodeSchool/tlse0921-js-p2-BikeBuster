@@ -45,19 +45,19 @@ function Tutoriels() {
             <div className="etapes">
               <h4>Étape 1 :</h4>
               <p className="explications">
-                Trouver une station avec un vélo disponible et en bon état.
+                Trouvez une station avec un vélo disponible et en bon état.
               </p>
               <h4>Étape 2 :</h4>
               <p className="explications">
-                Suivre les indications de la borne pour selectionner le vélo et
-                effectuer le paiement.
+                Suivez les indications de la borne pour selectionner le vélo et
+                effectuez le paiement.
               </p>
               <h4>Étape 3 :</h4>
               <p className="explications">
-                Appuyer sur le bouton pour retirer le vélo.
+                Appuyez sur le bouton pour retirer le vélo.
               </p>
               <h4>Étape 4 :</h4>
-              <p className="explications">Règler le vélo à la bonne hauteur.</p>
+              <p className="explications">Règlez le vélo à la bonne hauteur.</p>
             </div>
           </div>
         )}
@@ -75,17 +75,17 @@ function Tutoriels() {
             <div className="etapes">
               <h4>Étape 1 :</h4>
               <p className="explications">
-                Devant un emplacement libre, enclencher votre vélo.
+                Devant un emplacement libre, enclenchez votre vélo.
               </p>
               <h4>Étape 2 :</h4>
               <p className="explications">
-                Attendre un instant, un voyant vert suivi du double bip signifie
+                Attendez un instant, un voyant vert suivi du double bip signifie
                 que votre vélo est bien verrouillé.
               </p>
               <h4>Attention</h4>
               <p className="explications">
                 Si votre vélo est mal enclenché, le bip sera permanent
-                Votre responsabilité sera engagée. Essayer à nouveau.
+                Votre responsabilité sera engagée. Essayez à nouveau.
               </p>
             </div>
           </div>
