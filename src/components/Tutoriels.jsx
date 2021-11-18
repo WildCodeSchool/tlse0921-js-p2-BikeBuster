@@ -84,8 +84,8 @@ function Tutoriels() {
               </p>
               <h4>Attention</h4>
               <p className="explications">
-                Si votre vélo est mal enclenché, le bip sera permanent
-                Votre responsabilité sera engagée. Essayez à nouveau.
+                Si votre vélo est mal enclenché, le bip sera permanent Votre
+                responsabilité sera engagée. Essayez à nouveau.
               </p>
             </div>
           </div>
