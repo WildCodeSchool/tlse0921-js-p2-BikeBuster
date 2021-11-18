@@ -50,8 +50,7 @@ function Home() {
   const [itinerary, setItinerary] = useState(null);
   const [placeId, setPlaceId] = useState(null);
   const [address, setAddress] = useState(null);
-
-  const [click, setClick] = useState(false);
+  const [position, setPosition] = useState(null);
 
   return (
     <LocalisationContext.Provider
@@ -60,10 +59,12 @@ function Home() {
         itinerary,
         placeId,
         address,
+        position,
         setCoordinates,
         setItinerary,
         setPlaceId,
         setAddress,
+        setPosition,
       }}
     >
       <div className="globalHome">
@@ -91,11 +92,11 @@ function Home() {
             </div>
           </div>
           <div className="search-bar">
-            <SearchBar setClick={setClick} />
+            <SearchBar />
           </div>
         </div>
         <div className="map">
-          <Map check={check} count={count} click={click} />
+          <Map check={check} count={count} />
         </div>
       </div>
     </LocalisationContext.Provider>

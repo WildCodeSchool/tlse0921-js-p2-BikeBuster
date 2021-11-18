@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
+import LocalisationContext from '../context/LocalisationContext';
 
 function LocationMarker() {
   const userMarker = new L.Icon({
@@ -8,7 +9,7 @@ function LocationMarker() {
     iconSize: [50, 50],
   });
 
-  const [position, setPosition] = useState(null);
+  const { position, setPosition } = useContext(LocalisationContext);
 
   const map = useMap();
 
