@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-bind */
 import { React, useState, useCallback } from 'react';
 
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -68,14 +67,8 @@ function Home() {
       }}
     >
       <div className="globalHome">
-        <>
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        </>
         <input id="button-search-container" type="checkbox" />
         <div className="scrolling-search">
-          <>
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          </>
           <label htmlFor="button-search-container">
             <ArrowDownwardIcon />
           </label>
