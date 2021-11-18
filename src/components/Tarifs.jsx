@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaMoneyBillAlt } from 'react-icons/fa';
-import img1 from '../assets/image.jpeg';
-import img2 from '../assets/velotoulouse.jpeg';
+import velotoulouse from './assets/velotoulouse.jpeg';
+import image from './assets/image.jpeg';
 
 const Tarifs = () => (
   <div className="tarif">
@@ -100,7 +100,7 @@ const Tarifs = () => (
       <h2>Abonnement</h2>
       <div className="card-text-center">
         <div className="overflow1">
-          <img src={img1} alt="image2" />
+          <img src={image} alt="image2" />
           <h2 className="card-title1">Abonnement mensuel</h2>
           <p>
             Souple, l abonnement mensuel vous permet d utiliser le service selon
@@ -127,7 +127,7 @@ const Tarifs = () => (
         <br />
         <br />
         <div className="overflow2">
-          <img src={img2} alt="image2" />
+          <img src={velotoulouse} alt="image2" />
           <h2 className="card-title2">Abonnement annuel</h2>
           <p>
             Simple d utilisation, l abonnement annuel vous permet de louer un

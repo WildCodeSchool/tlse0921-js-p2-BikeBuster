@@ -334,7 +334,6 @@ a {
   border-collapse: collapse;
   width: 100%;
   height: 500px;
-  box-shadow: 0 5px 50px rgba (0, 0, 0, 15%);
   border: 1px solid #ddd;
 }
 
@@ -710,6 +709,7 @@ h4 {
 
   .overflow1 {
     width: 40%;
+    height: 595px;
     font-family: var(--text-font);
   }
 
