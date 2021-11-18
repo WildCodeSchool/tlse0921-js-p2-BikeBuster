@@ -14,7 +14,7 @@ import LocationMarker from './LocationMarker';
 import ItineraryMarker from './ItineraryMarker';
 
 function Map(props) {
-  const { count, check, click } = props;
+  const { count, check } = props;
   const [results, setResults] = useState([]);
   useEffect(() => {
     fetch(
@@ -39,34 +39,22 @@ function Map(props) {
         <ZoomControl position="bottomright" />
         {!check && (
           <>
-            <GreenMarkersBikes results={results} count={count} click={click} />
-            <YellowMarkersBikes results={results} count={count} click={click} />
-            <RedMarkersBikes results={results} count={count} click={click} />
+            <GreenMarkersBikes results={results} count={count} />
+            <YellowMarkersBikes results={results} count={count} />
+            <RedMarkersBikes results={results} count={count} />
           </>
         )}
         ;
         {check && (
           <>
-            <GreenMarkersBikeStands
-              results={results}
-              count={count}
-              click={click}
-            />
-            <YellowMarkersBikeStands
-              results={results}
-              count={count}
-              click={click}
-            />
-            <RedMarkersBikeStands
-              results={results}
-              count={count}
-              click={click}
-            />
+            <GreenMarkersBikeStands results={results} count={count} />
+            <YellowMarkersBikeStands results={results} count={count} />
+            <RedMarkersBikeStands results={results} count={count} />
           </>
         )}
         ;
         <LocationMarker />
-        <ItineraryMarker click={click} />
+        <ItineraryMarker />
       </MapContainer>
     </div>
   );

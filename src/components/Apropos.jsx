@@ -23,7 +23,7 @@ const Apropos = () => (
       <div className="Apropos-card">
         <h1>Qui somme nous ?</h1>
         <p>
-          l&apos;équipe derrière ce bijou est composée de Cristi, Laurie, Leo,
+          L&apos;équipe derrière ce bijou est composée de Cristi, Laurie, Leo,
           Antonia et Malik. <br /> Vous pouvez scroller en bas pour découvrir
           nos p&apos;tites têtes.{' '}
         </p>

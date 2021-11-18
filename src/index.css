@@ -333,9 +333,9 @@ a {
 
 .buttonTarif button {
   height: 100%;
-  border-radius: 20%;
+  border-radius: 10px;
   background-color: var(--green-color);
-  color: black;
+  color: white;
 }
 .table-style {
   border-collapse: collapse;
@@ -393,13 +393,16 @@ a {
 .ticket-title {
   display: flex;
   flex-direction: column;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border: 1px solid whitesmoke;
   text-align: center;
   background-color: var(--green-color);
   justify-content: center;
   font-family: var(--title-font);
   margin-bottom: 1%;
+  padding-bottom: 1.5rem;
+  color: white;
+  font-family: var(--text-font);
 }
 
 .card-text-center {
@@ -493,6 +496,7 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
 /* ___________ PAGE A PROPOS _______________ */
 
 .Apropos-card {
