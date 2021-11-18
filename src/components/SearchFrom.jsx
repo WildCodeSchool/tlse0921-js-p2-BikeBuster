@@ -1,7 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 
 import SearchIcon from '@mui/icons-material/Search';
 import ClearIcon from '@mui/icons-material/Clear';
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import PlacesAutocomplete, {
   geocodeByAddress,
@@ -15,6 +18,23 @@ function SearchBar() {
     setCoordinates, setItinerary, setPlaceId, address, setAddress,
   } = useContext(LocalisationContext);
 
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  function displayError() {
+    if (error === true) {
+      toast.error(errorMessage, {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
+  }
+
   const handleSelect = async (value) => {
     try {
       const result = await geocodeByAddress(value);
@@ -24,7 +44,9 @@ function SearchBar() {
       setPlaceId(result[0].place_id);
       setItinerary(true);
     } catch (err) {
-      console.log(err);
+      setError(true);
+      setErrorMessage(err);
+      displayError();
     }
   };
 
