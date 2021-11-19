@@ -2,7 +2,6 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 const Count = (props) => {
-  // eslint-disable-next-line react/prop-types
   const { count, handleMoreBikes, handleLessBikes } = props;
   return (
     <div className="counter">
@@ -11,7 +10,7 @@ const Count = (props) => {
           -
         </Button>
       </Stack>
-      <h1>{count}</h1>
+      <p>{count}</p>
       <Stack spacing={2} direction="row">
         <Button type="button" onClick={handleLessBikes} variant="contained">
           +
