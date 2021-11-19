@@ -49,7 +49,7 @@ function Home() {
   const [coordinates, setCoordinates] = useState(null);
   const [itinerary, setItinerary] = useState(null);
   const [placeId, setPlaceId] = useState(null);
-  const [address, setAddress] = useState(null);
+  const [address, setAddress] = useState('');
   const [position, setPosition] = useState(null);
 
   return (
